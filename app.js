@@ -29,6 +29,22 @@ In early sages; JavaScript's language is written in forumals that will then be a
     
 */
 
+// JavaScript Instruction Day One 7/29/2024 
+
+//
+var hello = "world";
+var num = 7;
+var bool = true;
+var undef= undefined;
+var none = null;
+
+console.log(5);
+console.log(hello);
+console.log("world"); /*console.log(world) will not show up because it thinks world is a variable. But i don't understand what that means. */ //<-- QUESTION what does this mean??
+console.log (num);
+console.log(bool);
+/*As we are in the early stages of JS were going to be using console.log as a way to see our progess in the early stages. This will be what we use until we get to DOM manipulation*/
+
 // JavaScript Quiz. 8/2/2024
 
 //Q1
@@ -40,9 +56,11 @@ let numbers = [1 , 2 , 3 , 4, 5]
 console.log (numbers[0]+ numbers[2])
 
 //Q3  (come back)
+/*
 let languages = ["JavaScript" , "Python" , "Java"]
 let language.push = ["Ruby"]
 console.log(languages[1,4,3])
+*/
 
 //Q4
 
