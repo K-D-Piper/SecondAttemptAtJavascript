@@ -38,13 +38,137 @@ var bool = true;
 var undef= undefined;
 var none = null;
 
-console.log(5);
-console.log(hello);
-console.log("world"); /*console.log(world) will not show up because it thinks world is a variable. But i don't understand what that means. */ //<-- QUESTION what does this mean??
-console.log (num);
-console.log(bool);
+// console.log(5);
+// console.log(hello);
+// console.log("world"); /*console.log(world) will not show up because it thinks world is a variable. But i don't understand what that means. */ //<-- QUESTION what does this mean??
+
 /*As we are in the early stages of JS were going to be using console.log as a way to see our progess in the early stages. This will be what we use until we get to DOM manipulation*/
 
+console.log (num);
+
+num = 29
+
+console.log(num);
+
+
+//*MATH VARIABLES 
+var foo; 
+
+console.log(foo)
+
+foo = 19;
+
+console.log(foo + 4);
+
+//? Concat
+
+var textOne = 'Hello';
+
+console.log(textOne + ' ' + 'World' + "Dude!")
+
+//Bool variables 
+//let 
+//const 
+//escape the character
+//wrap with opposite quote 
+//addition "+"
+//subtration "-"
+//division "/"
+//mutiplication "*"
+//increment "++"
+//decrement "--"
+//modules "%"
+
+//const == IMMUTABLE
+//CANNOT CHANGE INFOMATION OF CONST;
+const bar = "You can not change me";
+
+//bar = 8 (didn't / wouldn't work)
+
+console.log(bar)
+
+//let = its accessible based on his scope
+let bar2 = 'You can change me!'
+
+bar2 = 10
+
+console.log(bar2)
+
+//Dealing with quotes in strings
+let stringQuote = "You aren't special"
+console.log(stringQuote)
+
+//escaping the quote ( Q: WHAT ARE THESE?)
+let escapeQuote= 'You aren\'t special'
+console.log(escapeQuote)
+
+//increments and decrements ( Q: WHAT ARE THESE?)
+let num3 = 0
+console.log(num3)
+num3++;
+console.log(num3)
+num3--
+console.log(num3)
+
+// setting multi-variables
+let baz, baz2, baz3
+baz3 = 8
+console.log("I'm Baz3" + baz3)
+
+//Template Literals 
+console.log(`Hello Baz2 ${baz3}`)
+
+//DAY ONE QUIZ 7/29/2024
+//!TEMPATURE CONVERTER 
+
+//F = C * 9/5 +32
+// CONSOLE.LOG(ANSWER)
+
+let ctemp = 30
+let ftemp = ctemp * 9/5 + 32
+console.log(ftemp)
+
+//! Age calculator 
+//subtract the birth year from the current year to get the age. 
+// Console.log(answer)
+
+let currentyear = 2024
+let birthyear= 1998
+let age = currentyear - birthyear
+console.log(age)
+
+//TODO Personal Greeting
+//? Input the user's name. 
+// console out a personalized greeting message. 
+
+let greeting = "Heyyy. Want some cake?"
+console.log(greeting)
+
+//TODO Tip Calcualtor 
+//? Input the user to input the bill amout and the tip percetage.
+// Calcuate the tip amout and console the total bill.
+
+let billamount = 50
+let tipPercertage = .20
+let tip = billamount * tipPercertage
+console.log(tip)
+let finalbill = billamount + tip
+console.log(finalbill)
+
+//TODO Age Calculator in days
+//Ask the user to input their age in years
+//Multiply the age in years by 365
+//console the total days 
+
+let MyAge =  25
+let Days = 365
+let TotalDays = MyAge * Days
+console.log(TotalDays)
+
+//! END OF DAY ONE 
+
+
+/*
 // JavaScript Quiz. 8/2/2024
 
 //Q1
@@ -56,11 +180,11 @@ let numbers = [1 , 2 , 3 , 4, 5]
 console.log (numbers[0]+ numbers[2])
 
 //Q3  (come back)
-/*
+
 let languages = ["JavaScript" , "Python" , "Java"]
 let language.push = ["Ruby"]
 console.log(languages[1,4,3])
-*/
+
 
 //Q4
 
@@ -86,3 +210,6 @@ if (x > 5 || x < 10) {
 } else {
     console.log ("Out of range")
 }
+
+
+*/
