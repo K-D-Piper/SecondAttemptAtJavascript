@@ -167,6 +167,21 @@ console.log(TotalDays)
 
 //! END OF DAY ONE 
 
+//Day 2 7/31/2024 (Arrays and Conditions/ Decisions)
+//creating an array 
+let fruits = ["apples" , "strawberry" , "cherry" , "orange"];
+//variables can work as index nums
+let kid = 1
+
+console.log(fruits)
+console.log(fruits[3])
+console.log(fruits[kid])
+
+//updating array data 
+fruits[1]= "blueberries"
+console.log(fruits)
+
+
 
 /*
 // JavaScript Quiz. 8/2/2024
