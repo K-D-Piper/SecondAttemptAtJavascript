@@ -168,8 +168,11 @@ console.log(TotalDays)
 //! END OF DAY ONE 
 
 //Day 2 7/31/2024 (Arrays and Conditions/ Decisions)
+//INSTRUCTION 
+
 //creating an array 
 let fruits = ["apples" , "strawberry" , "cherry" , "orange"];
+
 //variables can work as index nums
 let kid = 1
 
@@ -180,6 +183,94 @@ console.log(fruits[kid])
 //updating array data 
 fruits[1]= "blueberries"
 console.log(fruits)
+
+//Adding new item to an array
+let officeCharacters = ["Michael" , "Jim" , "Dwight"]
+console.log(officeCharacters)
+
+//.push = adds new data at the end of an array
+officeCharacters.push("Andy")
+console.log(officeCharacters)
+
+//.pop = removes the last item in the array
+officeCharacters.pop()
+console.log(officeCharacters)
+
+//.unshift = adds a new item to the front of the array
+officeCharacters.unshift("Dwight")
+console.log(officeCharacters)
+
+//.shift = removes the first item in the array 
+officeCharacters.shift()
+console.log(officeCharacters)
+
+//.length = gives us the total number of items in a array
+console.log(officeCharacters.length)
+
+//REFERENCE/RESOURCE : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects 
+
+//QUIZ (7/31/2024)
+
+//! Access Array Elements
+//TODO Define an array of items 
+let items = ["apple" , "banana" , "cherry" , "date", "elderberry"]
+
+//TODO Access specific elements
+let firstItem = items[0]
+let thirdItem = items[2]
+let lastItem = items[4]
+
+//Output the results
+console.log("Items: " + items)
+console.log("First Item: " + firstItem)
+console.log("Third Item: " + thirdItem)
+console.log("Last Item: " + lastItem)
+
+//! List of Favorite Movies
+//TODO Define an array of favorite movies
+//Output each movie individually
+
+fav_movies = ["Barbie Movie", "Coraline", "Princess & the Frog"]
+console.log(fav_movies[0])
+console.log(fav_movies[1])
+console.log(fav_movies[2])
+
+//Sum of Array Elements
+//TODO Define an array of numbers
+//TODO Calculate sum of the numbers 
+//Output the results
+
+let count_array = [3, 6, 9, 12, 15]
+let sum = 0
+
+for (let i = 0; i< count_array.length; i++) {
+    sum += count_array[i];
+}
+console.log(sum)
+
+//! Concatenate Strings in an Array 
+//TODO Define an array of strings
+//TODO Concateate the strings
+//Output the result 
+
+let cat_string = ["cats " , "are " , "cute ", "but ", "evil "]
+console.log(cat_string[0]+cat_string[1]+ cat_string[2] + cat_string[3] + cat_string[4])
+
+//! Update Array Elements
+//TODO Define an array of items
+let colors = ["red" , "blue" , "green" , "yellow", "purple"]
+//TODO Update
+//? green to cyan 
+//? purple to orange 
+//Output the result 
+
+colors[2] = "cyan"
+colors[4] = "orange"
+console.log(colors)
+
+//QUIZ ENDED 
+//INSTRUCTION CONT. 7/31/2024
+
 
 
 
