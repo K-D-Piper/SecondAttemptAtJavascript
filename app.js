@@ -1,7 +1,7 @@
 /* 
 
 // Welcome to my section of notes.
-JavaScript is a language to be layered on top of an HTML page to cause more fun elaborate effects. 
+JavaScript is a language to be layered within an HTML page to cause more fun elaborate effects. 
 
 
 The statements work as followed/as written 
@@ -241,12 +241,12 @@ console.log(fav_movies[2])
 //Output the results
 
 let count_array = [3, 6, 9, 12, 15]
-let sum = 0
+let count_sum = 0
 
 for (let i = 0; i< count_array.length; i++) {
-    sum += count_array[i];
+    count_sum += count_array[i];
 }
-console.log(sum)
+console.log(count_sum)
 
 //! Concatenate Strings in an Array 
 //TODO Define an array of strings
@@ -271,7 +271,69 @@ console.log(colors)
 //QUIZ ENDED 
 //INSTRUCTION CONT. 7/31/2024
 
+//PRATICE PROBLEMS SECTION 
+//! List of Favorite Movies
 
+//TODO Define an array of favorite movies
+let movies = ["Treasure Plant" , "The Nice Guys" , "500 Days of Summer"]
+// Output each movie indivually 
+console.log(`Movie One : ${movies[0]}`);
+console.log("Movie One : ${movies[0]}");
+console.log(`Movie One : ${movies[1]}`);
+console.log(`Movie One : ${movies[2]}`);
+
+//! Sum of Array Elements
+//TODO Define an array of mumbers
+let nums = [8, 20, 2, 10, 12]
+//TODO calucalte sum of the numbers
+let sum = nums[0] + nums[1] + nums[2] + nums[3] + nums[4]
+//Output the result
+console.log(sum)
+
+//! Concatenate Strings in an Array 
+//TODO Define an array of strings 
+let words = ["There are" , " only happy accidents " , " no mistakes", "- Bob Ross"]
+//TODO Concatenate the strings 
+let sentence = words[0] + words[2] + words[1] + words[3]
+//Output the results 
+console.log(sentence)
+
+//! Update Array Elements
+
+//Todo Define an array of items
+let colorz = ["red" , "green" , "yellow" , "purple"]
+//TODO Update 
+//? green to cyan 
+//? purple to orange 
+
+
+
+//Random numbers
+let rng = Math.floor(Math.random() * Math.floor(colorz.length))
+
+let number1 = Math.floor(2)
+console.log(number1)
+
+colorz[2] = "cyan"
+colorz.pop()
+colorz.push("orange")
+//Output the results 
+console.log(colorz)
+
+/*
+
+Boolean Operators 
+    == means "is equal to"
+    === means "is strictly equal to"
+    != means "is not equal to" (! means NOT)
+    > means "is greater than"
+    < means "is less than"
+    >= means "is greter than or equal to"
+    <= means "is less than or equal to"
+
+*/ 
+
+//Decisions / Conditions 
 
 
 /*
@@ -316,6 +378,5 @@ if (x > 5 || x < 10) {
 } else {
     console.log ("Out of range")
 }
-
 
 */
