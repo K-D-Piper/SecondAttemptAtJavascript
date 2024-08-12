@@ -318,7 +318,7 @@ colorz[2] = "cyan"
 colorz.pop()
 colorz.push("orange")
 //Output the results 
-console.log(colorz)
+console.log(colorz[rng])
 
 /*
 
@@ -331,9 +331,311 @@ Boolean Operators
     >= means "is greter than or equal to"
     <= means "is less than or equal to"
 
+    Boolean Logical Operators 
+
+    && means "and"
+    || means "or"
+    ! means "not"
+
 */ 
 
 //Decisions / Conditions 
+
+//! CONDITIONS 
+
+let boo = true;
+console.log (boo)
+
+/*
+"==" - "is equal to"
+*/
+let bbar = 4 == 5-4
+
+console.log(4 == 2+2);
+
+//Strictly Equals to "==="
+let boo2 = "4"
+let boo3 = 4
+let boo4 = "four"
+
+console.log(boo2 == boo3) //true
+
+console.log(boo2===boo3) //false 
+
+//Not equal to "!="
+
+console.log(boo3 != boo4); //true
+
+//Greater Than ">"
+
+console.log(boo3 > 6) //false 
+
+//Less than "<"
+console.log(boo3 < 6) //true 
+
+//Less than or equal to "<=" 
+console.log(boo4 <= 4) ; //true
+
+//Greater than or equal to ">="
+console.log(boo3 >= 4); //true
+
+
+/* 
+Boolean Logical Operators 
+
+&& means "and"
+|| means "or"
+! means "not"
+*/ 
+
+//AND = "&&"
+console.log("Double Ampersands:" + 4==4 && 3==2) //false 
+
+//OR = "||"
+console.log("Double Lines: " + 4 ==4 || 3==2) //false 
+
+// NOT = "!"
+
+console.log("Exclimation Point :" + (!true)) //false 
+
+// If Statements (if the condition is true, run the code)
+
+/*
+If (condition){
+    //do stuff
+};
+
+*/
+
+if (boo3 == 4){
+    console.log("Hey. I'm number 4")
+};
+
+// If/else (if the first condition isn't true. Run the else)
+
+/* 
+If (condition) {
+    // do stuff
+} else {
+    //do something else
+}
+*/
+
+let amHungry = true ;
+
+if (amHungry == true) {
+    console.log("Lets eat! I want Chicken nuggies")
+} else {
+    console.log("Let's keep coding! Yay!")
+}
+
+
+// else/if statment
+/*
+if (condition) {
+    //do stuff    
+} else if (another condition) {
+    //do other stuff
+}
+    else { 
+    //do something else     
+}
+*/
+// Else if structure 
+
+let howHungry = 50;
+
+if( amHungry === true && howHungry >= 75) {
+    console.log("I'm so hungry i can eat a horse")
+} else if (amHungry === true && howHungry >= 75) { 
+    console.log("I'm hungry enough to eat cheeze-its")
+} else if ( amHungry === false && howHungry >=25) {
+    console.log("I'm depressed.")
+}else {
+    console.log("I'm not that hungry dude")
+}
+
+// switch statements 
+/*
+switch (expression) {
+case case1:
+    //do this
+    break;
+case case2:
+    //no, do this
+    break;
+case case3:
+    //nevermind boht of those cases, do this!
+    break;
+default:
+    //do this 
+}
+*/
+
+switch (amHungry == true) {
+    case howHungry >= 75:
+        console.log ("I'm so hungry i can eat a horse")
+        break;
+    case howHungry >= 25: 
+        console.log("I'm hungry enough to eat cheeze-its")
+        break;
+    default:
+        console.log("I just want to eat to eat")
+}
+
+// DAY 2 (7/31/2024) END 
+//DAY 3 (8/1/2024) START
+//Instruction 
+
+/*
+//Falsey Values  (if you ever write these they'll always be seen as false)
+
+- false
+- 0
+- -0
+- 0n
+- "" / '' (empty strings)
+- null
+- undefined
+- NaN
+
+*/
+
+//CONITIONALS PRATICE. QUIZ (8/1/2024)
+
+//! Favorite Fruit Checker (1)
+//TODO define an array of favorite fruits
+//TODO define a variable for the fruit to check 
+//* Check if the fruit is in the array and output the results
+
+let best_fruits = ["strawberries" , "cherries", "kiwis"];
+best_fruits = ["pickles"]
+
+if(best_fruits == true){
+    console.log("Gimmie dat fruit!")
+} else {
+    console.log("You can keep that sad fruit. ")
+}
+
+//! Grade Categorizer (2)
+//TODO Define a varable for the grade
+//TODO Catergorize the grade
+//* Output the result
+
+//(needs double check/fix)
+let grade = [true, 50]
+
+switch (grade == true && grade == 100){
+ case grade >= 90: 
+    console.log("A")
+    break;
+ case grade >= 80: 
+    console.log("B")
+    break;
+ case (grade >= 70):
+    console.log("C")
+    break;
+ case (grade >= 60):
+    console.log("D")
+    break;
+ case (grade <= 59):
+    console.log("E")
+    break;
+}
+
+//! Day of the week checker (3)
+//TODO Define an array of days of the week
+//TODO Define a variable for the day to check
+//TODO Check if the day is a weekend or weekday 
+//* Output the results 
+
+let days_of_week = ["Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" , "Sunday"]
+days_of_week = "Saturday"
+
+if (days_of_week == [ "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday"]){
+    console.log( "Weekday")
+} else {
+    console.log("Weekend")
+}
+
+//! Tempature Checker (4)
+//TODO Define a variable for the tempature 
+//TODO Catagorize the tempature and 
+//* output the result 
+
+let temp = 92
+
+if (temp >=90){
+    console.log("it's hot")
+} else if (temp <= 89 && temp >= 60){
+    console.log("it's nice")
+} if (temp <=59 ) {
+    console.log("it's cold")
+}
+
+//! Number Sign Checker (5)
+//TODO Define a variable for the number 
+//TODO Check the sign of the number 
+//* output the result 
+
+let sign_num = 50
+
+if(sign_num ===50) {
+    console.log( "Thats a good sign")
+} else {
+    console.log("Thats not a good sign.")
+}
+
+//QUIZ SECTION DAY 2 (8/1/2024) END
+//INSTRUCTION DAY 2 cont. (8/1/2024) START
+
+//! PSUEDOCODE DEBUGGER BREAKIKNG DOWN PROBLEMS
+
+//! Favorite Fruit Checker
+//TODO Define an array of favorite fruits
+//? SET array favFruit = [item1, item2...]
+const favFruits = ["pineapple" , "orange" , "strawberry" , "grapes"]
+//TODO Define a variable for the fruit to check 
+//? Set string fruit = "item"
+let fruit = "orange"
+//* SET 3 Check IF the fruit is in the array
+//console.log(fruit == favFruits[0]);
+debugger
+//*  and OUTPUT the RESULT 
+//IF statement will be invovled 
+//? checking to see if VAR fruit is on the VAR favFRUIT list;
+if(fruit == favFruits[0] || fruitFruits[1] fruit ==favFruits[2] || fruits ==favFruits[3]){
+    console.log("Hey I'm a favorite food!")
+} else {
+    console.log("Yuck, not my taste!")
+}
+// if (fruit == favFruits[0]) {
+//  console.log("Hey I'm an orange fruit!")
+
+//} else if("Hey I'm a orange fruit!")
+
+// } else {
+//  console.log("Yuck, not my taste!")
+
+//}
+
+//! Grade Categorizer 
+//TODO Define a variable for the grade
+//? SET INT gradeNum = 0;
+//TODO Categroize the grade 
+//? if VAR gradeNum is BETWEEN 100 and 90 = A;
+//? ELSE IF VAR gradeNum is Between 89 and 80 = B;
+//? ELSE IF VAR gradeNum isi BETWEEN 79 and 70 = C;
+if ( gradeNum > 90 && gradeNum <= 100){
+    console.log ("You've recieved an A!")
+}
+
+
+
+
+
+
+
 
 
 /*
