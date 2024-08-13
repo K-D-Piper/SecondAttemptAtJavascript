@@ -604,7 +604,7 @@ debugger
 //*  and OUTPUT the RESULT 
 //IF statement will be invovled 
 //? checking to see if VAR fruit is on the VAR favFRUIT list;
-if(fruit == favFruits[0] || fruitFruits[1] fruit ==favFruits[2] || fruits ==favFruits[3]){
+if(fruit == favFruits[0] || fruit == favFruits[1] || fruits == favFruits[2] || fruits ==favFruits[3]){
     console.log("Hey I'm a favorite food!")
 } else {
     console.log("Yuck, not my taste!")
@@ -622,18 +622,52 @@ if(fruit == favFruits[0] || fruitFruits[1] fruit ==favFruits[2] || fruits ==favF
 //! Grade Categorizer 
 //TODO Define a variable for the grade
 //? SET INT gradeNum = 0;
+debugger
+let gradeNum = 78;
+
 //TODO Categroize the grade 
 //? if VAR gradeNum is BETWEEN 100 and 90 = A;
 //? ELSE IF VAR gradeNum is Between 89 and 80 = B;
 //? ELSE IF VAR gradeNum isi BETWEEN 79 and 70 = C;
-if ( gradeNum > 90 && gradeNum <= 100){
-    console.log ("You've recieved an A!")
+if (gradeNum >= 90 && gradeNum <= 100) {
+    console.log ("You've recieved an A!");
+} else if (gradeNum > 80 && gradeNum <= 89) {
+    console.log("You've recieved a B!");
+} else if ( gradeNum > 70 && gradeNum <=79){
+    console.log("You've recieved a C!");
+} else if (gradeNum > 60 && gradeNum <= 69) {
+    console.log ("You've recieved a D!");
+} else {
+    console.log("You've failed!")
 }
 
+//* output the result 
+//? console.log (GRADE LETTER)
 
+//! Day of the week Checker 
+//TODO Define an array of days of the week 
+// SET array dayOfTheWeek = [];
+const daysOfTheWeek = ["sunday" , "monday" , "tuesday" , "wednesday" , "thursday" , "friday" , "saturday"]
+//? SET string day = "Monday";
+let day = "monday"
+//TODO Check if the day is a weekday or weekend
+//? IF statement?
+//? Conditions: 
+//? - Day of a week 
+//? - weekends: "saturday" || "sunday":
+//? - weekdays: "monday" || "tuesday" || "wednesday" || "thursday" || "friday"
 
-
-
+debugger
+switch (day) {
+    case day == daysOfTheWeek[0] || day == daysOfTheWeek[6]:
+    console.log("It's the weekend");
+    break;
+    case day == daysOfTheWeek[1] || day == daysOfTheWeek[2] || day == daysOfTheWeek[3] || daysOfTheWeek[4] || daysOfTheWeek[5]: 
+    console.log("It's the Weekday! D:");
+    break;
+    default:
+        console.log("This day doesn't exist??");
+}
 
 
 
