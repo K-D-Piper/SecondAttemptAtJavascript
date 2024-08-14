@@ -3,7 +3,7 @@
 JavaScript is a language to be layered within an HTML page to cause more fun elaborate effects. 
 
 
-The statements work as followed/as written 
+Early Statements work as followed/written 
 
 "Statement + Declaration = Data Type " OR "Variable + variable name = data type "
     How you write these is through use of RESERVED WORDS (also called methods) which are prevously defined words in JavaScript, bascailly so you and your computer know what you want/what you're trying to do. 
@@ -164,9 +164,11 @@ let Days = 365
 let TotalDays = MyAge * Days
 console.log(TotalDays)
 
-//! END OF DAY ONE 
+//! DAY 1 (7/29/2024) END
 
-//Day 2 7/31/2024 (Arrays and Conditions/ Decisions)
+//! NOTE: (7/30/2024) NO RECORDING 
+
+//Day 2 (7/31/2024) (Arrays and Conditions/ Decisions) START
 //INSTRUCTION 
 
 //creating an array 
@@ -208,7 +210,7 @@ console.log(officeCharacters.length)
 
 //REFERENCE/RESOURCE : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects 
 
-//QUIZ (7/31/2024)
+//QUIZ DAY 2 (7/31/2024)
 
 //! Access Array Elements
 //TODO Define an array of items 
@@ -267,12 +269,11 @@ colors[2] = "cyan"
 colors[4] = "orange"
 console.log(colors)
 
-//QUIZ ENDED 
-//INSTRUCTION CONT. 7/31/2024
+// DAY 2 (7/31/2024) QUIZ END
+// DAY 2 (7/31/2024)INSTRUCTION CONT. 
+//PRATICE PROBLEMS SECTION GO OVER/ REVIEW
 
-//PRATICE PROBLEMS SECTION 
 //! List of Favorite Movies
-
 //TODO Define an array of favorite movies
 let movies = ["Treasure Plant" , "The Nice Guys" , "500 Days of Summer"]
 // Output each movie indivually 
@@ -304,7 +305,6 @@ let colorz = ["red" , "green" , "yellow" , "purple"]
 //TODO Update 
 //? green to cyan 
 //? purple to orange 
-
 
 
 //Random numbers
@@ -482,7 +482,7 @@ switch (amHungry == true) {
         console.log("I just want to eat to eat")
 }
 
-// DAY 2 (7/31/2024) END 
+// DAY 2  (7/31/2024) REVIEW/INSTRCTION END 
 //DAY 3 (8/1/2024) START
 //Instruction 
 
@@ -585,8 +585,8 @@ if(sign_num ===50) {
     console.log("Thats not a good sign.")
 }
 
-//QUIZ SECTION DAY 2 (8/1/2024) END
-//INSTRUCTION DAY 2 cont. (8/1/2024) START
+//QUIZ SECTION DAY 3 (8/1/2024) END
+//INSTRUCTION DAY 3 cont. (8/1/2024) START
 
 //! PSUEDOCODE DEBUGGER BREAKIKNG DOWN PROBLEMS
 
@@ -667,6 +667,64 @@ switch (day) {
     default:
         console.log("This day doesn't exist??");
 }
+
+//! Temperature Checker
+//TODO Define a variable for the temerature 
+//? SET INT currentTemp = NUM;
+let currentTemp = 70;
+//? If Structure 
+//? 3 conditions:
+//? HOT - currentTemp >=85
+//? just right - currentTemp < 85 AND currentTemp <= 60
+//? COLD - currentTemp < 60
+
+if (currentTemp >= 85) {
+    console.log("Aye it's way too HOT brother!")
+} else if (currentTemp < 85 && currentTemp >= 60) {
+    console.log("Keep it like this Dude! Just right!")
+} else {
+    console.log("I'm freezing. Global warming isn't real!")
+}
+//*output the result 
+
+//! Number Sign Checker
+//TODO Define a variable for the number
+//? SET INT num = NUMBER ;
+let num = 9;
+//TODO Check the sign of the number
+//? Switch Statement 
+//? 3 conditons:
+//? If num > 0
+//? If num == 0;
+//? if num < 0;
+
+debugger
+//switch(num){
+//    case num> 0:
+//        console.log("This is a postive Number!");
+//        break;
+//    case num == 0:
+//        console.log("This is a zero number");
+//        break;
+//    case num < 0:
+//        console.log("This number is negative!");
+//        break;
+//}
+
+if(num > 0) {
+    console.log("This is a positve Number!");
+} else if (num === 0) {
+    console.log("This is a 0 number")
+} else if (num < 0) {
+    console.log("This number is negative!")
+}
+//* output the result 
+
+//DAY 3 (8/1/2024) REVIEW/INSTRUCTION END
+
+//DAY 4 (8/2/2024) START
+//ACTIVE INSTRUCTION. LOOPS
+
 
 
 
