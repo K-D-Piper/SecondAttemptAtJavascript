@@ -599,7 +599,7 @@ const favFruits = ["pineapple" , "orange" , "strawberry" , "grapes"]
 let fruit = "orange"
 //* SET 3 Check IF the fruit is in the array
 //console.log(fruit == favFruits[0]);
-debugger
+//debugger
 //*  and OUTPUT the RESULT 
 //IF statement will be invovled 
 //? checking to see if VAR fruit is on the VAR favFRUIT list;
@@ -621,7 +621,7 @@ if(fruit == favFruits[0] || fruit == favFruits[1] || fruits == favFruits[2] || f
 //! Grade Categorizer 
 //TODO Define a variable for the grade
 //? SET INT gradeNum = 0;
-debugger
+//debugger
 let gradeNum = 78;
 
 //TODO Categroize the grade 
@@ -656,7 +656,7 @@ let day = "monday"
 //? - weekends: "saturday" || "sunday":
 //? - weekdays: "monday" || "tuesday" || "wednesday" || "thursday" || "friday"
 
-debugger
+//debugger
 switch (day) {
     case day == daysOfTheWeek[0] || day == daysOfTheWeek[6]:
     console.log("It's the weekend");
@@ -690,7 +690,7 @@ if (currentTemp >= 85) {
 //! Number Sign Checker
 //TODO Define a variable for the number
 //? SET INT num = NUMBER ;
-let num = 9;
+let numz = 9;
 //TODO Check the sign of the number
 //? Switch Statement 
 //? 3 conditons:
@@ -698,7 +698,7 @@ let num = 9;
 //? If num == 0;
 //? if num < 0;
 
-debugger
+//debugger
 //switch(num){
 //    case num> 0:
 //        console.log("This is a postive Number!");
@@ -711,11 +711,11 @@ debugger
 //        break;
 //}
 
-if(num > 0) {
+if(numz > 0) {
     console.log("This is a positve Number!");
-} else if (num === 0) {
+} else if (numz === 0) {
     console.log("This is a 0 number")
-} else if (num < 0) {
+} else if (numz < 0) {
     console.log("This number is negative!")
 }
 //* output the result 
@@ -723,10 +723,70 @@ if(num > 0) {
 //DAY 3 (8/1/2024) REVIEW/INSTRUCTION END
 
 //DAY 4 (8/2/2024) START
-//ACTIVE INSTRUCTION. LOOPS
+/*
+Welcome to the world of loops! Don't understand? Read line again.
+
+Loops are another tool in a JavaScript coder's toolbox. 
+
+Loops work by repeating a sequence of instrcutions until a condiion is met. *
+    (But NotesWriter! I don't know what that means.) Okay, so to better understand, read that opening line.
+
+In JavaScript there are many different kinds of statements and "for loop" is just another kind. (there are other kinds of loops statments too!)
+    A "for loop" statemnet is written/structured as followed
+        for (initalization ; condition ; iteration) {
+            //do stuff
+        }
+            // parentheses meanings...
+            Initalization: Sets a counter. Think "START AT ___/ START HERE" (var i = 0 )
+            Condition : a Boolean expression; if the condion is true the code block will run (i <= 10 )
+            Iteration: the steps to move throughout the dataset (Basically, how many times do you want this to repeat) (i++)
+                //writers note. the opposite version of an incrament (which is the above i++) is a decrament (i--) 
+
+* Writers Note. The next  lines are my understanding (so it can be wrong) but is as followed 
+    Initalizaton: Starting point.
+    Conditon : Condition to be met
+    Iteration: How many times the code will repeat. 
+
+    So one can also read it as 
+        for (what we have ; what were checking; how many times were checking it) {
+            //if what were checking is true run this code / run whats inside the brackets*  //writers note. These are brackets. {brackets}
+        }
+
+But the point of loops is to make one's code reusable. Instead of writing something a million times and checking it a million times. Write a loop once and the computer will check it a million times (or as many times as you want) for you and on its own. 
+*/
+//MY EXAMPLE (plz check for correctness)
+
+let Line = "Welcome to the world of loops! Don't understand? Read line again."
+
+//BTW i is the most commonly used loop phase because its short for "initization" which is the thing your starting point. Initilization just means assinging value to a variable/something 
+for ( i = 0; i < 1 ; i++) {
+    console.log(Line + " 1")
+}
+//Read above as followed. //For ( initizlation to equal 0 ; initilztion is less than 1 ; initization should be checked/ran once then again.) 
+
+// OR 
+//debugger
+for (understanding = 0; understanding < 1 ; understanding++) {
+    console.log(Line + " 2")
+}
+//read above as followed. //for the case of ( let understanding be equal to 0 ; and understanding is less than one; understanding should be ran once then again.)
+// DAY 4 (8/2/2024) ACTIVE INSTRUCTION LOOPS 
 
 
+for (let i = 0 ; i < 10 ; i++){
+    console.log(`I am current ${i} and I am still under 10`);
+}
+//so what the code above is saying is the console is reading and increasing the variable until it reaches 10 then will stop. 
 
+//Video ended 30:22
+//Example of how loops are used. Say I'm a teacher and I want to get a mean of the total of the class
+let grades = [78 , 89, 35 , 90, 76] ;
+let sumz;
+
+console.log(grade.length)
+
+for( let i = 0; grades.length; i++){
+}
 
 
 /*
