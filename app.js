@@ -759,14 +759,14 @@ But the point of loops is to make one's code reusable. Instead of writing someth
 let Line = "Welcome to the world of loops! Don't understand? Read line again."
 
 //BTW i is the most commonly used loop phase because its short for "initization" which is the thing your starting point. Initilization just means assinging value to a variable/something 
-for ( i = 0; i < 1 ; i++) {
+for (let i = 0; i < 1 ; i++) {
     console.log(Line + " 1")
 }
 //Read above as followed. //For ( initizlation to equal 0 ; initilztion is less than 1 ; initization should be checked/ran once then again.) 
 
 // OR 
 //debugger
-for (understanding = 0; understanding < 1 ; understanding++) {
+for ( let understanding = 0; understanding < 1 ; understanding++) {
     console.log(Line + " 2")
 }
 //read above as followed. //for the case of ( let understanding be equal to 0 ; and understanding is less than one; understanding should be ran once then again.)
@@ -781,48 +781,91 @@ for (let i = 0 ; i < 10 ; i++){
 //Video ended 30:22
 //Example of how loops are used. Say I'm a teacher and I want to get a mean of the total of the class
 let grades = [78 , 89, 35 , 90, 76] ;
-let sumz;
+let sumz = 0;
 
-console.log(grade.length)
+console.log(grades.length)
 
-for( let i = 0; grades.length; i++){
+for( let i = 0; i < grades.length; i++){
+    //console.log(grades[i])
+    sumz += grades [i];//+= will add to the current numbers of the variable 
 }
 
+console.log(sumz);
+console.log(sumz / grades.length) //reads sum divided but tests
 
-/*
+const favFruitz = ["pineapple" , "orange" , "strawberry" , "grapes"]
+
+let fruitz = "strawberry"
+
+//debugger
+for (let i = 0; i < favFruitz.length ; i++) {
+
+   if(fruit == favFruitz[i]) {
+    console.log ("I'm in da Basket!")
+    break;
+   } else {
+    console.log(" Not in the string")
+   }
+}
+
+for (let i= 0 ; i < favFruitz.length ; i++) {
+    if (favFruitz[i] == "orange") {
+        favFruitz[i] = favFruitz[i].toUpperCase()
+        console.log(favFruitz);
+    } else {
+        console.log("YOU'RE NOT MY ORANGE")
+    }
+}
+
 // JavaScript Quiz. 8/2/2024
 
-//Q1
-let fruits = ["apple" , "banana" , "cherry"]
-console.log(fruits[1])
+//JavaScript Quiz
+ 
+//Question 1:
+//Write a line of code that declares an array called fruits with the elements "apple", "banana", and "cherry". Then, log the second element of the array to the console.
+ //Q1
+let quizFruits = ["apple" , "banana" , "cherry"]
+console.log(quizFruits[1])
 
+
+//Question 2:
+//Write a line of code that declares an array called numbers with the elements 1, 2, 3, 4, and 5. Then, create a variable sum that is the sum of the first and third elements of the array, and log sum to the console.
 //Q2
 let numbers = [1 , 2 , 3 , 4, 5]
-console.log (numbers[0]+ numbers[2])
-
-//Q3  (come back)
+let varsum = numbers[0] + numbers[2]
+console.log (varsum)
+ 
+//Question 3:
+//Write a line of code that declares an array called languages with the elements "JavaScript", "Python", and "Java". Then, change the second element of the array to "Ruby" and log the entire array to the console.
+//Q3 
 
 let languages = ["JavaScript" , "Python" , "Java"]
-let language.push = ["Ruby"]
-console.log(languages[1,4,3])
+languages[1] = "Ruby"
+console.log(languages)
 
-
+ 
+//Question 4:
+//Write a line of code that declares a variable age and assigns it the value 20. Then, use an if-else statement to check if age is greater than or equal to 18, and log "Eligible to vote" if true, and "Not eligible to vote" otherwise.
 //Q4
 
-let age = 20
+let qAge = 20
     
-if (age >= 18) {
+if (qAge >= 18) {
     console.log("Eligible to Vote")
 } else{
     console.log("Sorry Kid. Not Eligable to Vote. ")
-}
+} 
 
-//Q5
+//Question 5:
+//Write a line of code that declares an array called cities with the elements "New York", "Los Angeles", and "Chicago". Then, create a variable lastCity that holds the last element of the array, and log lastCity to the console.
+ //Q5
 
 let cities = ["New York" , "Los Angeles" , "Chicago"]
 let lastcity = cities[2]
 console.log(lastcity)
 
+//Question 6:
+//Write a line of code that declares a variable x and assigns it the value 7. Then, use an if-else statement to check if x is greater than 5 or less than 10, and log "In range" if true, and "Out of range" otherwise.
 //Q6 
 let x = 7
 
@@ -831,5 +874,12 @@ if (x > 5 || x < 10) {
 } else {
     console.log ("Out of range")
 }
+
+
+
+// MY QUESTIONS 
+/*
+So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false?
+
 
 */
