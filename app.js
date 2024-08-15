@@ -772,13 +772,13 @@ for ( let understanding = 0; understanding < 1 ; understanding++) {
 //read above as followed. //for the case of ( let understanding be equal to 0 ; and understanding is less than one; understanding should be ran once then again.)
 // DAY 4 (8/2/2024) ACTIVE INSTRUCTION LOOPS 
 
-
+//For loop Structure
+//for ()
 for (let i = 0 ; i < 10 ; i++){
     console.log(`I am current ${i} and I am still under 10`);
 }
 //so what the code above is saying is the console is reading and increasing the variable until it reaches 10 then will stop. 
 
-//Video ended 30:22
 //Example of how loops are used. Say I'm a teacher and I want to get a mean of the total of the class
 let grades = [78 , 89, 35 , 90, 76] ;
 let sumz = 0;
@@ -875,11 +875,24 @@ if (x > 5 || x < 10) {
     console.log ("Out of range")
 }
 
+// DAY 4 (8/2/2024) END 
+
+// DAY 5 (8/5/2024) START
+
+
+for ( let i = 0 ; i < 5; i++) {
+    //WE can utilize the variable i in a for loop arguments 
+    console.log("Monday is an Amazing day to start the week!"+ i) //purpose of demostation is to show the many ways one can find dynamic data (the the future) 
+}
+
+
 
 
 // MY QUESTIONS 
 /*
-So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false?
+//So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false?
 
+// whats the difference between `` and "" ?
 
+//how do i know what words are mine/unique to use and what words are already preset in JavaScript?
 */
