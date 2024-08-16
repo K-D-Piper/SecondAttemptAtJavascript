@@ -772,8 +772,7 @@ for ( let understanding = 0; understanding < 1 ; understanding++) {
 //read above as followed. //for the case of ( let understanding be equal to 0 ; and understanding is less than one; understanding should be ran once then again.)
 // DAY 4 (8/2/2024) ACTIVE INSTRUCTION LOOPS 
 
-//For loop Structure
-//for ()
+
 for (let i = 0 ; i < 10 ; i++){
     console.log(`I am current ${i} and I am still under 10`);
 }
@@ -879,14 +878,82 @@ if (x > 5 || x < 10) {
 
 // DAY 5 (8/5/2024) START
 
+//For loop Structure 
+//for (Initialization; condition; iteration) {
+
+//}
+//?Ex. Look below vvv
 
 for ( let i = 0 ; i < 5; i++) {
-    //WE can utilize the variable i in a for loop arguments 
-    console.log("Monday is an Amazing day to start the week!"+ i) //purpose of demostation is to show the many ways one can find dynamic data (the the future) 
+    //We can utilize the variable i in for loop arguements
+    // "i" variable number is changing each loop bc of the interaction argument (i++) 
+   console.log("Monday is an Amazing day to start the week!"+ i); //purpose of demostation is to show the many ways one can find dynamic data (the the future) 
+};
+
+let season = ["fall" , " winter" , "summer" , "spring"];
+//Display all seasons on teh websites console
+for ( let i = 0; i < seasons.length ; i++){
+    //we call array strings by variables index.
+    //ex. seasons[1], seasons[2]...
+    console.log(seasons[i]);
 }
 
+for (let i = 0 ; i < season.length ; i++){
+    if( favSeason == seasons[i]){
+    } else {
+        console.lot("skip")
+    }
+}
+
+//QUIZ DAY 5 8/5/2024
 
 
+//! List of Favorite Movies (1)
+//TODO Define an array of favorite movies
+//* Output each movie individually
+ 
+
+ 
+//! Sum of Array Elements (2)
+//TODO Define an array of 5 numbers
+//TODO Calculate sum of the numbers
+//* Output the result
+ 
+//! Update Array Elements
+ 
+
+//TODO Define an array of items (3)
+let colors = ["red", "blue", "green", "yellow", "purple"];
+//TODO Update
+//? green to cyan
+//? purple to orange
+//* Output the results
+ 
+//! Grade Categorizer (4)
+//TODO Define a array of 5 grade numbers
+//TODO Categorize each grade
+//* output each result
+ 
+ 
+//! Day of the Week Checker(5)
+//TODO Define an array of days of the week
+//TODO Define a variable for the day to check
+//TODO Check if the day is a weekday or weekend
+//* output the result
+ 
+ 
+//! Temperature Checker(6)
+//TODO Define a array of 5 temperature numbers
+//TODO Categorize the temperatures in 3 types (HOT, COLD, just right)
+//*output the result
+ 
+//! Number Sign Checker(7)
+//TODO Define a array of 5 numbers
+//TODO Check the sign of the number
+//* output the result
+
+
+//QUIZ DAY 5 (8/5/2024) END
 
 // MY QUESTIONS 
 /*
