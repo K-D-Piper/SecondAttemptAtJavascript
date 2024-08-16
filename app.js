@@ -890,7 +890,7 @@ for ( let i = 0 ; i < 5; i++) {
    console.log("Monday is an Amazing day to start the week!"+ i); //purpose of demostation is to show the many ways one can find dynamic data (the the future) 
 };
 
-let season = ["fall" , " winter" , "summer" , "spring"];
+let seasons = ["fall" , " winter" , "summer" , "spring"];
 //Display all seasons on teh websites console
 for ( let i = 0; i < seasons.length ; i++){
     //we call array strings by variables index.
@@ -898,42 +898,70 @@ for ( let i = 0; i < seasons.length ; i++){
     console.log(seasons[i]);
 }
 
-for (let i = 0 ; i < season.length ; i++){
-    if( favSeason == seasons[i]){
+/* Had to comment out. favSeason was undefined. Needs recheck.
+for (let i = 0 ; i < seasons.length ; i++){
+    if(favSeason == seasons[i]){
     } else {
         console.lot("skip")
     }
 }
+*/
 
 //QUIZ DAY 5 8/5/2024
 
 
-//! List of Favorite Movies (1)
-//TODO Define an array of favorite movies
-//* Output each movie individually
+//! List of Favorite Movies (1) //Check 
+//TODO Define an array of favorite movies //Check 
+//* Output each movie individually //Check 
  
+fav_moviez = ["Barbie Movie", "Coraline", "Princess & the Frog"]
 
+for (let i = 0; i < fav_moviez.length ; i++){
+    console.log(fav_moviez[i])
+}
  
 //! Sum of Array Elements (2)
-//TODO Define an array of 5 numbers
-//TODO Calculate sum of the numbers
+//TODO Define an array of 5 numbers //Check 
+//TODO Calculate sum of the numbers 
 //* Output the result
- 
 //! Update Array Elements
  
+let numArr = [ 0, 3, 6, 8, 9]; //should be 26
+let numArrSum = 0;
+
+for ( let i = 0; i < numArr.length; i++){
+    numArrSum += numArr[i];
+}
+    console.log(numArrSum)
 
 //TODO Define an array of items (3)
-let colors = ["red", "blue", "green", "yellow", "purple"];
+let colorzz = ["red", "blue", "green", "yellow", "purple"];
 //TODO Update
 //? green to cyan
 //? purple to orange
 //* Output the results
+
+for (let i = 0 ; i < colorzz.length ; i++ ){
+
+}
+
+
+
  
 //! Grade Categorizer (4)
 //TODO Define a array of 5 grade numbers
 //TODO Categorize each grade
 //* output each result
  
+let mahGrades = [30, 50, 75, 100, 48]
+
+for (let i = 0 ; i < mahGrades.length ; i++) {
+    if (mahGrades <= 50) {
+        console.log ("Try Again")
+    } else ( mahGrades >= 70)
+}
+
+
  
 //! Day of the Week Checker(5)
 //TODO Define an array of days of the week
@@ -955,6 +983,8 @@ let colors = ["red", "blue", "green", "yellow", "purple"];
 
 //QUIZ DAY 5 (8/5/2024) END
 
+
+
 // MY QUESTIONS 
 /*
 //So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false?
@@ -962,4 +992,7 @@ let colors = ["red", "blue", "green", "yellow", "purple"];
 // whats the difference between `` and "" ?
 
 //how do i know what words are mine/unique to use and what words are already preset in JavaScript?
+
+//What are "template literals"
+
 */
