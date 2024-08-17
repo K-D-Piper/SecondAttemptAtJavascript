@@ -875,7 +875,6 @@ if (x > 5 || x < 10) {
 }
 
 // DAY 4 (8/2/2024) END 
-
 // DAY 5 (8/5/2024) START
 
 //For loop Structure 
@@ -909,7 +908,6 @@ for (let i = 0 ; i < seasons.length ; i++){
 
 //QUIZ DAY 5 8/5/2024
 
-
 //! List of Favorite Movies (1) //Check 
 //TODO Define an array of favorite movies //Check 
 //* Output each movie individually //Check 
@@ -919,7 +917,7 @@ fav_moviez = ["Barbie Movie", "Coraline", "Princess & the Frog"]
 for (let i = 0; i < fav_moviez.length ; i++){
     console.log(fav_moviez[i])
 }
- 
+
 //! Sum of Array Elements (2)
 //TODO Define an array of 5 numbers //Check 
 //TODO Calculate sum of the numbers 
@@ -952,41 +950,82 @@ for (let i = 0 ; i < colorzz.length ; i++ ){
 //TODO Categorize each grade
 //* output each result
 
-let mahGrades = [30, 50, 75, 100, 48]
+let mahGrades = [30, 50, 75, 100, 80]
 
-for (let i = 0 ; i < mahGrades.length ; i++){
-    
-    if (mahGrades[i] <= 50) 
-        {console.log ( "Try Again Sport")}
-    else if (mahGrades[i] >= 70 && mahGrades < 90)
-        {console.log("Nice! Good Try!")}
-    else if (mahGrades[i] >= 90)
-        {console.log("Certified Genius")}
+for (let i = 0 ; i < mahGrades.length ; i++)
+{
+    if (mahGrades[i] <= 60) 
+        {console.log ( "Try Again Sport. E")}
+    else if (mahGrades[i] >= 60 && mahGrades[i] < 70)
+        {console.log("Good Try, but maybe one more time. D" )}
+    else if (mahGrades[i] >= 70 && mahGrades[i] < 80)
+        {console.log("Great Try, but maybe one more time. C" )}
+    else if (mahGrades[i] >= 80 && mahGrades[i] < 90)
+        {console.log("Great Job! Gotta B." )}
+    else if (mahGrades[i] >= 90 && mahGrades[i] <= 100)
+        {console.log("Certifed Genius. Good Job A maker." )}
     else if ( mahGrades[i] > 100)
-        {console.log ("Scale Breaker")}
+        {console.log ("Overachiever's Award")}
 }
-
 
  
 //! Day of the Week Checker(5)
-//TODO Define an array of days of the week
-//TODO Define a variable for the day to check
+//TODO Define an array of days of the week (check)
+//TODO Define a variable for the day to check 
 //TODO Check if the day is a weekday or weekend
 //* output the result
  
+const mahDays = ["Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" , "Sunday"]
 
+mahDays = "Wednesday"
 
- 
+for (i = 0; i < mahDays.length ; i++)
+{
+    if ( mahDays[i] == "Saturday" || "Sunday") {
+        console.log("Weekend coding? Weirdo. Go have fun!")
+    } else {
+        console.log("Ha. Have a good week coding! Weekday Warrior")
+    }
+
+}
 //! Temperature Checker(6)
 //TODO Define a array of 5 temperature numbers
 //TODO Categorize the temperatures in 3 types (HOT, COLD, just right)
 //*output the result
  
+let mahTemps = [ 79, 101, 92, 75, 59]
+
+for (i = 0; i < mahTemps.length ; i++) 
+{
+    if (mahTemps[i] >= 80) {
+        console.log("Its too hot for this")
+    } else if (mahTemps[i] <= 79 && mahDays[i] >= 69){
+        console.log("just right")
+    } else {
+        console.log("Too Cold. Sweater Weather")
+    }
+}
+
+
+
 //! Number Sign Checker(7)
 //TODO Define a array of 5 numbers
 //TODO Check the sign of the number
 //* output the result
 
+const SignNumbers = [ -9 , 6 , 55, -8, 0]
+
+for (i = 0; i < SignNumbers.length ; i++) 
+{
+    if (SignNumbers[i] >= 1){
+        console.log("POSTIVE NUMBER")
+    } else if (SignNumbers[i] === 0) {
+        console.log("THATS ZERO")
+    } else {
+        console.log("NEGATIVE GHOSTRIDER")
+    }
+
+}
 
 //QUIZ DAY 5 (8/5/2024) END
 //DAY 5 (8/5/2024) ACTIVE INSTRCTION. QUIZ REVIEW START 
@@ -1041,7 +1080,7 @@ for (let i = 0; i < Grades.length; i++){
         console.log(`Good you made a B!`)
     } else if ( Grades[i] <= 79 && Grades[i] >= 70){
         console.log(`You passed withi a C.`)
-    } else if (Grades[i] <= 69 && Grades[i >= 60]){
+    } else if (Grades[i] <= 69 && Grades[i] >= 60){
         console.log("You have to study more. You made a D.")
     } else { 
         console.log("Better luck next time. You failed this test...")
@@ -1163,6 +1202,45 @@ for (let i = 0; i < num.length; i++){
     };
 };
 
+//! Day of the Week Checker 
+//TODO Define an array of days of the week 
+let daysoftheweek = ['monday' , 'tuesday' , 'wednesday' , 'thursday' , 'friday' , 'saturday' , 'sunday']
+//TODO Define a variable for the day to check 
+let currentDay = 'monday'
+//TODO Check if the day is a weekday or weekend
+for (let i = 0; i < daysoftheweek.length; i++){
+    //The other goal: Is let day inside of the LET daysoftheweek?
+    //MAIN GOAL: Is it the weekend? Or a weekday?
+    //what conditions can solve this?
+    //weekend = saturday, sunday;
+    //weekend = 'monday' , 'tueday' , 'wednesday' , 'thrusday' , 'friday' ;
+
+    if (day == daysoftheweek[i]) {
+        if (days== 'saturday' || days == 'sunday') {
+            console.log("ITS THE WEEKEND!") 
+        } else {
+            console.log(`${day} is part of the weekday`)
+        }
+}
+}
+//* output the result 
+
+//! Update Array Elements 
+//TODO Define an array of items 
+let Mcolors = ["red" , "blue" , "green" , "yellow" , "purple" , 'green' , 'blue'];
+//TODO Update 
+//? green to cyan 
+//? purple to orange 
+
+for (let i = 0; i < Mcolors.length ; i++){
+    //We are trying to find a specific color 
+    if (Mcolors[i] == 'green') {
+        Mcolors = 'cyan';
+    } else if (Mcolors[i] == purple) {
+        Mcolors[i] = 'orange';
+    }
+    console.log(Mcolors)
+}
 
 // DAY 5 (8/5/2024) ACTIVE INSTRUCTION/ QUIZ REIVEW END
 
