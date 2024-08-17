@@ -941,24 +941,29 @@ let colorzz = ["red", "blue", "green", "yellow", "purple"];
 //? purple to orange
 //* Output the results
 
+colorzz[2] = "cyan"
+colorzz[4] = "orange"
+
 for (let i = 0 ; i < colorzz.length ; i++ ){
+    console.log(colorzz[i])}
 
-}
-
-
-
- 
 //! Grade Categorizer (4)
 //TODO Define a array of 5 grade numbers
 //TODO Categorize each grade
 //* output each result
- 
+
 let mahGrades = [30, 50, 75, 100, 48]
 
-for (let i = 0 ; i < mahGrades.length ; i++) {
-    if (mahGrades <= 50) {
-        console.log ("Try Again")
-    } else ( mahGrades >= 70)
+for (let i = 0 ; i < mahGrades.length ; i++){
+    
+    if (mahGrades[i] <= 50) 
+        {console.log ( "Try Again Sport")}
+    else if (mahGrades[i] >= 70 && mahGrades < 90)
+        {console.log("Nice! Good Try!")}
+    else if (mahGrades[i] >= 90)
+        {console.log("Certified Genius")}
+    else if ( mahGrades[i] > 100)
+        {console.log ("Scale Breaker")}
 }
 
 
@@ -969,6 +974,8 @@ for (let i = 0 ; i < mahGrades.length ; i++) {
 //TODO Check if the day is a weekday or weekend
 //* output the result
  
+
+
  
 //! Temperature Checker(6)
 //TODO Define a array of 5 temperature numbers
@@ -982,10 +989,77 @@ for (let i = 0 ; i < mahGrades.length ; i++) {
 
 
 //QUIZ DAY 5 (8/5/2024) END
+//DAY 5 (8/5/2024) ACTIVE INSTRCTION. QUIZ REVIEW START 
+//Class Demonstrations 
 
+//Bianca's Movie List 
+let favMovies = ["Alen Covenant" , "Happiness for Beginners" , "Irish Wish", "Turbo"];
 
+for (let i =0 ; i< favMovies.length; i++) {
+    console.log(favMovies[i]);
+}
 
-// MY QUESTIONS 
+//Bryan's Sum of Array 
+const Numbers = [ 23,54, 87 , 19, 45];
+let Sum = 0;
+
+for (let i = 0; i < numbers.length; i++){
+    sum+= Numbers[i];
+}//end of loop
+
+console.log(Sum)
+
+// Kelvin's Update of Array Elements
+let Colors = ["red" , "blue", "green" , "yellow" , "purple"];
+for (let i =0 ; i < Colors.length; i++){
+    if(Colors[i] === "green"){
+        Colors[i] = "cyan"
+        console.log(Colors[i])
+    } else if (Colors[i] === "purple"){
+        Colors[i] = "orange"
+        console.log(colors[i])
+    }else{ 
+        console.log(Colors[i])
+    }
+}
+
+//Bryan's Array Update
+for (let i = 0; i < Colors.length; i++){
+    Colors.splice( 2 , 1, "cyan");
+    Colors.splice (4 ,1, "orange"); 
+}// end for loop 
+    console.log(Colors)
+//WritersQuestions. 1) how does the above work? (like with the extra numbers) 2) Explain splice again 
+
+//Christopher's Grade Checker 
+let Grades = [96 , 87, 75, 62, 54]
+
+for (let i = 0; i < Grades.length; i++){
+    if (Grades[i] <= 100 && Grades[i] >= 90){
+        console.log(`Great Job!! You made an A!!`)
+    } else if (Grades[i] <=89 && Grades[i] >=80) {
+        console.log(`Good you made a B!`)
+    } else if ( Grades[i] <= 79 && Grades[i] >= 70){
+        console.log(`You passed withi a C.`)
+    } else if (Grades[i] <= 69 && Grades[i >= 60]){
+        console.log("You have to study more. You made a D.")
+    } else { 
+        console.log("Better luck next time. You failed this test...")
+    };
+};
+
+//Nicole's Grade Checker
+
+// #region Grade Categorizer
+let Gradez = [95 , 82 , 62, 55, 74];
+//created an empty array to store teest score(grade) and grade (grade range)
+let GradeCategory = [];
+
+for (let i = 0 ; i < Gradez.length; i++){
+
+}
+
+    // MY QUESTIONS 
 /*
 //So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false?
 
