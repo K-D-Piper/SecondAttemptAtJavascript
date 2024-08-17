@@ -1056,9 +1056,148 @@ let Gradez = [95 , 82 , 62, 55, 74];
 let GradeCategory = [];
 
 for (let i = 0 ; i < Gradez.length; i++){
+    let Grade = Gradez[i]; //created var to store my arr 
+    let GradeRange; //number range in which test scores will be sorted in
 
+    if(Grade >= 90) {
+        GradeRange = "A";
+    } else if (Grade >= 80) {
+        GradeRange = "B";
+    } else if (Grade >= 70){
+        GradeRange = "C";
+    } else if (Grade >= 60){
+        GradeRange = "D";
+    } else {
+        GradeRange = "F";
+    }
+/* categorize the grade based on the "GradeRange" grade : num/ GradeRange : "A"
+created a new object with two properties ex grade(num): grade(A).push updates the array and adds the new elements grade/GradeRange to teh array */
+    GradeCategory.push({Grade: grade, GradeRange: GradeRange}); //Updates array 
+}
+    console.log(GradeCategory);//reads like this "0:{ grade: 95}, GradeRange: 'A' "
+    
+//Caleb's Grade's Checker
+//Ex. 4
+//Grade Categorizer 
+//ToDo Define a array of 5 grade numbers 
+//TODO categorize each grade 
+//output each result 
+
+let gradenumbers = [ 54, 96, 82, 73, 101, "bruh"];
+
+for (let i = 0; i < gradenumbers.length; i++) 
+{
+    switch(true)
+    {
+    case (gradenumbers[i] <= 100 && gradenumbers[i] >=93):
+        console.log(`${gradenumbers[i]} is an A.`);
+        break;
+    case (gradenumbers[i] <= 92 && gradenumbers[i] >=84):
+        console.log(`${gradenumbers[i]} is an B.`);
+        break;
+    case (gradenumbers[i] <= 83 && gradenumbers[i] >= 74 ):
+        console.log(`${gradenumbers[i]} is an C.`);
+        break;
+    case (gradenumbers[i] <= 73 && gradenumbers[i] >= 64 ):
+        console.log(`${gradenumbers[i]} is an D.`);
+        break;
+    case (gradenumbers[i] <= 63 && gradenumbers[i] >= 0 ):
+        console.log(`${gradenumbers[i]} is an F.`);
+        break;
+    //defaults to this when the value at index i is not within 0-100 or the desired data type 
+    default:
+        console.log(`${gradenumbers[i]} is n ot a valid score.`);
+        break;
+    }
 }
 
+
+//Chel's Day of the Week Checker
+
+let week = ["Monday" , "Tueday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" , "Sunday"];
+let daysLeft = [5 , 4 , 3 , 2 , 1];
+let dayz = "Tuesday";
+for (let i = 0; i < week.length; i++){
+    if (day == week [week.length -1] || day == week[week.length -2]) {
+        console.log("It's the weekend!");
+        break;
+    } else if (day == week[i]){
+        console.log(`It's ${week[i]}. Days left until the weekend: ${daysLeft[i]}!`);
+        break;
+    }
+}
+
+// Nicole's temp checker
+//# region Temp Chekcer 
+let tempatures = [32 , 75, 90, 60, 45]
+
+let hotTemp = 85;
+let coldTemp = 50;
+
+for( let i = 0; i < tempatures.length; i++){
+    let temp = tempatures[i]; //variable to store array 
+    let category; //variable to store categories (i.e. hot, cold, just right)
+
+    if (temp >= hotTemp){
+        category = "HOT";
+    } else if (temp <= coldTemp) {
+        category = "COLD";
+    } else {
+        category = "just right";
+    }
+    console.log(` ${temp} F is ${category}.`);
+}
+//#endregion
+// Christophers's Number Sign Checker
+//TODO Define a array of 5 numbers
+let num = [-8, 23, 0, 63, -72]
+//TODO Check the sign of the number 
+//* Output the result 
+for (let i = 0; i < num.length; i++){
+    if(num[i] < 0) {
+        console.log("This is a negative number")
+    } else if (num[i] == 0) {
+        console.log("This number is a 0...")
+    } else {
+        console.log("This is a postive number!")
+    };
+};
+
+
+// DAY 5 (8/5/2024) ACTIVE INSTRUCTION/ QUIZ REIVEW END
+
+// DAY 6 (8/6/2024) QUIZ START
+//! For Loops Problems TWO
+/*
+!Multiples Checker
+? Create a program that checks if the elements in an array of numbers are multiples of a specific number and displays a message accordingly.
+TODO Define an array containing a list of numbers.
+TODO Define a variable for the specific number to check multiples of.
+Output Results: Use console.log to display the results.
+ 
+ 
+!Age Group Categorizer
+? Create a program that categorizes the ages in an array as 'child', 'teen', 'adult', or 'senior' based on their values.
+TODO Define an array containing a list of ages.
+Output Results: Use console.log to display the age categories.
+ 
+ 
+! Palindrome Checker
+?Create a program that checks if the elements in an array of strings are palindromes and displays a message accordingly.
+TODO Define an array containing a list of strings.
+Output Results: Use console.log to display the results.
+ 
+!Prime Number Checker
+?Create a program that checks if the elements in an array of numbers are prime and displays a message accordingly.
+TODO Define an array containing a list of numbers.
+Output Results: Use console.log to display the results.
+ 
+!Uppercase Checker
+?Create a program that checks if the elements in an array of strings are in uppercase and displays a message accordingly.
+TODO Define an array containing a list of strings.
+Output Results: Use console.log to display the results.
+ 
+*/
     // MY QUESTIONS 
 /*
 //So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false?
