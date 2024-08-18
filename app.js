@@ -890,6 +890,7 @@ for ( let i = 0 ; i < 5; i++) {
 };
 
 let seasons = ["fall" , " winter" , "summer" , "spring"];
+let favSeason = "fall"
 //Display all seasons on teh websites console
 for ( let i = 0; i < seasons.length ; i++){
     //we call array strings by variables index.
@@ -897,14 +898,15 @@ for ( let i = 0; i < seasons.length ; i++){
     console.log(seasons[i]);
 }
 
-/* Had to comment out. favSeason was undefined. Needs recheck.
 for (let i = 0 ; i < seasons.length ; i++){
     if(favSeason == seasons[i]){
+        console.log("Thats my favorite season!");
+        break;
     } else {
-        console.lot("skip")
+        console.log("skip")
     }
 }
-*/
+
 
 //QUIZ DAY 5 8/5/2024
 
@@ -1015,7 +1017,7 @@ for ( let i = 0; i < mahTemps.length ; i++)
 
 const SignNumbers = [ -9 , 6 , 55, -8, 0]
 
-for (i = 0; i < SignNumbers.length ; i++) 
+for (let i = 0; i < SignNumbers.length ; i++) 
 {
     if (SignNumbers[i] >= 1){
         console.log("POSTIVE NUMBER")
@@ -1216,7 +1218,7 @@ for (let i = 0; i < daysoftheweek.length; i++){
     //weekend = 'monday' , 'tueday' , 'wednesday' , 'thrusday' , 'friday' ;
 
     if (day == daysoftheweek[i]) {
-        if (days== 'saturday' || days == 'sunday') {
+        if (day == 'saturday' || day == 'sunday') {
             console.log("ITS THE WEEKEND!") 
         } else {
             console.log(`${day} is part of the weekday`)
@@ -1224,6 +1226,7 @@ for (let i = 0; i < daysoftheweek.length; i++){
 }
 }
 //* output the result 
+
 
 //! Update Array Elements 
 //TODO Define an array of items 
@@ -1236,7 +1239,7 @@ for (let i = 0; i < Mcolors.length ; i++){
     //We are trying to find a specific color 
     if (Mcolors[i] == 'green') {
         Mcolors = 'cyan';
-    } else if (Mcolors[i] == purple) {
+    } else if (Mcolors[i] == 'purple') {
         Mcolors[i] = 'orange';
     }
     console.log(Mcolors)
@@ -1253,6 +1256,7 @@ for (let i = 0; i < Mcolors.length ; i++){
 //TODO Define a variable for the specific number to check multiples of.
 //Output Results: Use console.log to display the results.
  
+
  
 //!Age Group Categorizer (2)
 //? Create a program that categorizes the ages in an array as 'child', 'teen', 'adult', or 'senior' based on their values.
@@ -1350,7 +1354,7 @@ let isMultiple = true;
 
 for (i= 0 ; i <num_arr.length; i++){
     /* if the # in the arr is divisible by the multiple var without a remainder left over it's a multiple*/
-    if(num_arr[i] % multiple ===0) {
+    if(num_arr[i] % multiple === 0) {
         console.log(num_arr[i] + " is a multple of" + multiple);
     } else {
         console.log(num_arr[i] + " is not a multiple of " + multiple);
@@ -1395,7 +1399,7 @@ const possiblePalindromes = ["kayak" , "pool" , "rotator" , "nun" , "spit"];
         let str = possiblePalindromes[i];
         let reversed ="";
 
-        for (let j = srt.length -1; j >= 0; j--){
+        for (let j = str.length -1; j >= 0; j--){
             reversed +- str[j];
         } //end for loop 
 
@@ -1405,6 +1409,147 @@ const possiblePalindromes = ["kayak" , "pool" , "rotator" , "nun" , "spit"];
             console.log(`${str} is NOT a palindrome!`)
         }// end if else 
     }// end for loop 
+
+// Nichole's Palidrome Checker 
+// #region Palidrome Checker
+
+/* a word, phrase, or sequence that reads the same backward as forward, e.g., madam or radar. */
+
+let palidromeWords = ["radar" , "nurses" , "level" , "orange" , "madam"];
+
+//Loop through each string in the array 
+for (let i = 0; i < palidromeWords.lengh; i++) {
+
+    /* Reverse the word in order to match 
+        split turns the string inot chars/characters, reverse method reverses the letters and join method then joins the charaacters, then it's stored in the variable reverseWord */
+    let reversedWord = palindromeWords[i].split("").reverse().join("");
+
+    //Check if the origional strings =revrseString
+    if (palidromeWords[i] === reversedWord) {
+        console.log(`"${palidromeWords[i]}" is a palidrome.`);
+    } else { 
+        console.log(`"${palidromeWords[i]}" is not a palidrome.`);
+    }
+}
+
+//#endregion 
+
+//Sara's Prime Number Checker 
+
+//A PRIME NUMBER ONLY DIVIDES EVENLY BY 1 OR BY ITSELF -- SO WE NEED TO CHECK EVERY NUMBER LESS THAN THAT NUUMBER TO SEE IF IT DIVISBLE. 
+
+//DECLARE VARIBLES 
+let numToCheck = [1, 7, 8, 6, 13, 50];
+
+//FOR LOOP LOOKS THROUGH ARRAY 
+for( let i = 0; i<numToCheck.length; i++){
+
+    //isPrime IS DECLARED INSIDE OF FOR LOOP SO THAT IT WILL BEGIN AS TRUE EACH TIME THE LOOP RUNS-
+        //OTHERWISE OCE IT IS SET TO FALSE IT WILL NOT RESET TO TRUE BEFORE THE NEXTR PASS ADN WE CAN RECEIVE BAD DATA
+        let isPrime = true;
+    //IF THE NUMBER AT TARGET LOCATION IS LOOSLY EQUAL TO 1- LOG THAT 1 IS NOT A PRIME NOR COMPOSITE 
+    if( numToCheck[i] == 1) {
+        console.log("1 is neither prime nor composite number.");
+    }//END IF NUM == 1
+
+    //ELSE IF THE NUMBER AT TARGET LOCATION IS GREATER THAN ONE WE ENTER A NESTED FOR LOOP 
+    else if (numToCheck[i] > 1) {
+
+        // WE START J AT  2 - THE LOWEST NUMBER AFTER KNOWING THAT IT IS GREATER THAN 1. THE LOOP WIILL CONTINE TO CHECK EACH NUMBER 
+        //UNTIL IT IS LESS THAN THE NUMBER WE ARE TARGETING. 
+        for (let j = 2; j < numToCheck[i]; j++){
+
+            // IF THE REMAINDER EQUALS 0 AT ANY OF THE NUMBERS LESS THAN ITSELF WE KNOW IT IS NOT PRIME AND isPrime WILL SWITCH TO FALSE 
+            if(numToCheck[i] % j ==0){
+                isPrime = false;
+                break;
+            } //END IF %==0
+
+        }//END INNER FOR LOOP 
+
+        //IF AFTER EVALUCATION isPrime IS TRUE IT WILL LOG PRIME NUMBER -- IF FALSE IT WILL LOG NOT PRIME 
+        if(isPrime === true){
+            console.log(`${numToCheck[i]} is a prime number`);
+        } else {
+            console.log(`${numToCheck[i]} is not a prime number`);
+        }//END IF/ELSE isPrime === TRUE
+
+    }//END ELSE IF GREATER THAN 1
+
+} //END OUTER FOR LOOP
+
+//Caleb's Prime Number Checker 
+
+/*
+!Prime Number Checker 
+?Create a program that checks if the elemnts in an array of numbers are prime and displays a message accordinglly.
+TODO Define an array containing a list of numbers.
+Output Results: Use console.log to display the results. 
+*/
+
+let numbersArray = [0 , 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+
+for (let i = 0; i < numbersArray.length; i++)
+{
+    let divisibleByOne = false;
+    let divisbleByItself = false; 
+    let divisbleByOther = false; 
+
+    //repeats until j equals value currenlty at numbersArray[i]
+    for (let j = 1; j<= numbersArray[i]; j++)
+    {
+        //only runs when remainder of teh current numbersArray[i] value divided by j is equal to 0
+        if(numbersArray[i] % j == 0)
+        {
+            //sets boolean variables to true if nuimbersArray[i] is divisible by 1, itself, or any other number 
+            switch (true)
+            {
+                case(j==1):
+                    divisibleByOne = true ;
+                    break;
+                case (j == numbersArray[i]):
+                    divisbleByItself = true;
+                    break;
+                default:
+                    divisbleByOther = true;
+                    break;
+            }
+        }
+    }
+
+    //compares the boolean variables values and determines if the current value at numersArray[i] is a prime number or not 
+    switch(true)
+    {
+        case(divisibleByOne == true && divisbleByItself == true && divisbleByOther == false):
+            console.log(`${numbersArray[i]} is a prime number.`);
+            break;
+        case (divisbleByOther == true || numbersArray[i] == 0 || numbersArray[i] == 1):
+            console.log(`${numbersArray[i]} is NOT a prime number.`);
+            break;
+        default:
+            console.log("Something went wrong with calculations.")
+    }
+}
+
+console.log("~~~~~~~~~~~~~~~~~~~~~~");
+console.log("Problem Five Console Output: ");
+console.log("~~~~~~~~~~~~~~~~~~~~~~")
+
+//Nicole's Uppercase Checker
+// #region Upper Case Checker
+
+let words_arr = ["PLATANO" , "Nicole" , "adioS", "Code" , "JS", "idk"];
+
+for (let i = 0; i < words_arr.length; i++){
+    let word = words_arr[i];
+
+    if(word=== word.toUpperCase()){
+        console.log(`'${word}' is in uppercase.`);
+    } else { 
+        console.log(`'${word}' is not in uppecasae.`);
+    }
+}
+//#endregion 
 
 // DAY 7 (8/7/2024) ACTIVE INSTRUCITON/ QUIZ REIVEW END
 // DAY 8 (8/8/2024) ASSIGNMENT/ PROJECT START
