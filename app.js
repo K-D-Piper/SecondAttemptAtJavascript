@@ -1344,7 +1344,7 @@ for (let month = 1; month <= 12; month++){
 //DAY 6 (8/6/2024) ACTIVE INSTRUCTION END 
 
 //DAY 7 (8/7/2024) ACTIVE INSTRUCTION/ QUIZ REVIEW START
-
+// Classmate Quiz Answers Showcase START
 //Nicole's #region Multiples Checker
 
 let num_arr = [2 , 78, 5, 63, 3, 2, 8, 12, 34]
@@ -1549,8 +1549,136 @@ for (let i = 0; i < words_arr.length; i++){
         console.log(`'${word}' is not in uppecasae.`);
     }
 }
-//#endregion 
+//#endregion
 
+/* Classmate Demonstrations END */ 
+
+/*
+My Explaining/Understanding of a Nested for loop 
+
+a regular for loop looks like this...
+
+for ( let understanding =0 ; understanding < 1; understanding++)
+{
+    console.log(line)
+}
+//The above is an example of an INFINITE LOOP. It reads. "for a case of (understanding being equal to 0; and a condition where if understaning is less than 1; run understanding once, then again."
+    //line is 'Welcome to the world of loops! Don't understand? Read line again.' * this will be what it logs on the console 
+
+//Next is an (is the word ESCAPED?) for loop
+
+for (let understanding = 0; understanding < 1 ; understanding++) 
+{
+    console.log(Line[understanding])
+}
+//The above line should read. "For the case of (let understanding be equal to 0; understaning less than 1; run understnaing once, then again." 
+    //console.log( Line[check understanding once, then again, then stop (as it will be equal to 1)] )
+        //NoteWriter Note. The above does work but its logging into the console as just W   (needs double check)
+
+//next is a NESTED for loop 
+    // A NESTED for loop is just a for loop inside of a for loop. 
+        //hang on. This is about to get confusing. 
+
+//NESTED FOR LOOP*
+* my first understaing/ interpertaion 
+
+Picture a circle inside of a cirle. 
+    Cirle One says : Spin Once. Then Again. 
+    Cirle Two says : Spin Once. Then Again <3.
+Inside Cirle One is Cirle Two. 
+
+So in that case lets look at this. 
+
+let line1 = " Hi. I'm Line 1. Spin."
+let line2 = "Hello. I'm Line 2. Spin <3"
+
+for (let spin1 = 0 ; spin1 < 1 ; spin1++)
+{
+    console.log("Spin 1") 
+
+        for (let spin2 = 0; spin2 < 1; spin2++)
+        {
+            console.log("Spin 2")
+        }
+}
+
+So the above will read 
+
+//and for the computer it will look like this... 
+
+-- Start (again) --> for (let spin1 = 0 ; spin1 < 1 ; spin1++)--> Start  |
+{                                                                        |
+    console.log("Spin 1")  <---What the console sees <-------------------|
+                                                        
+        for (let spin2 = 0; spin2 < 1; spin2++)                          |
+        {                                                                |
+            console.log("Spin 2")                                        |
+        }                                                                |
+
+}  <--- End <------------------------------------------------------------|                           
+
+//first one goes like above
+//second one goes like below 
+
+for (let spin1 = 0 ; spin1 < 1 ; spin1++)
+{         
+    console.log("Spin 1") 
+
+--Start Again --> for (let spin2 = 0; spin2 < 1; spin2++)--> Start|
+        {                                                         |
+            console.log("Spin 2") <---What the console sees <-----|
+        } <--- End <----------------------------------------------|
+
+}
+
+//to get to spin1 you gotta go through spin 2. It takes longer to get to spin 1 than 2 so to get back to spin 1 one must have to spin twice. 
+
+So put them together. 
+-- Start (Again) --> for (let spin1 = 0 ; spin1 < 1 ; spin1++)----> Start|
+{                                                                        |
+    console.log("Spin 1")  <---What the console sees <-------------------|
+                                                        
+--Start (Again)-->for (let spin2 = 0; spin2 < 1; spin2++)---------> Start| 
+        {                                                                |
+            console.log("Spin 2")<---What the console sees <-------------| 
+        } <--- End <-----------------------------------------------------|
+
+                                                                    
+}  <--- End <------------------------------------------------------------|                           
+*/ 
+// ACTIVE INSTRUCTION START DAY 7 (8/7/2024)
+//NESTED LOOPS
+//Global and BLOCKED scope 
+
+//Global = This variable is accessible from any point in this file.l 
+let global = "Hello!"
+//OUTER LOOP RUNS 10 TIMES
+for (let i =1 ; i<= 10; i++){
+    let myName = "Michael Valencia"
+    console.log(myName)
+    //INNER LOOP IS GONNA RUN 50 times
+    //for (let j= 1; j <=5 ; j++){
+    //    console.log(`${i} * ${j} = ${i *j} `)
+    // }
+    myName = "Margarito Valencia"; 
+}
+console.log(myName);
+
+let firstWord = "Hello";
+
+{
+    //THIS IS A BLOCKED SCOPE VARIABLE 
+    let secondWord = "World!";
+    console.log(firstWord + secondWord);
+}
+
+console.log(firstWord + secondWord)
+
+/*
+My understanding of global vs local / blocked scope...
+
+
+*/
 // DAY 7 (8/7/2024) ACTIVE INSTRUCITON/ QUIZ REIVEW END
 // DAY 8 (8/8/2024) ASSIGNMENT/ PROJECT START
 
@@ -1594,7 +1722,7 @@ After finished go to discussion tab and submit link to the Javascript Coin Proje
 /*
 //So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false?
 
-// whats the difference between `` and "" ?
+// whats the difference between `` and "" and '' ?
 
 //how do i know what words are mine/unique to use and what words are already preset in JavaScript?
 
