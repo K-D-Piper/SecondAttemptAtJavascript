@@ -975,11 +975,11 @@ for (let i = 0 ; i < mahGrades.length ; i++)
 //TODO Check if the day is a weekday or weekend
 //* output the result
  
-const mahDays = ["Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" , "Sunday"]
+let mahDays = ["Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" , "Sunday"]
 
 mahDays = "Wednesday"
 
-for (i = 0; i < mahDays.length ; i++)
+for ( let i = 0 ; i < mahDays.length ; i++)
 {
     if ( mahDays[i] == "Saturday" || "Sunday") {
         console.log("Weekend coding? Weirdo. Go have fun!")
@@ -995,7 +995,7 @@ for (i = 0; i < mahDays.length ; i++)
  
 let mahTemps = [ 79, 101, 92, 75, 59]
 
-for (i = 0; i < mahTemps.length ; i++) 
+for ( let i = 0; i < mahTemps.length ; i++) 
 {
     if (mahTemps[i] >= 80) {
         console.log("Its too hot for this")
@@ -1189,13 +1189,13 @@ for( let i = 0; i < tempatures.length; i++){
 //#endregion
 // Christophers's Number Sign Checker
 //TODO Define a array of 5 numbers
-let num = [-8, 23, 0, 63, -72]
+let NUM = [-8, 23, 0, 63, -72]
 //TODO Check the sign of the number 
 //* Output the result 
-for (let i = 0; i < num.length; i++){
-    if(num[i] < 0) {
+for (let i = 0; i < NUM.length; i++){
+    if(NUM[i] < 0) {
         console.log("This is a negative number")
-    } else if (num[i] == 0) {
+    } else if (NUM[i] == 0) {
         console.log("This number is a 0...")
     } else {
         console.log("This is a postive number!")
@@ -1244,39 +1244,208 @@ for (let i = 0; i < Mcolors.length ; i++){
 
 // DAY 5 (8/5/2024) ACTIVE INSTRUCTION/ QUIZ REIVEW END
 
-// DAY 6 (8/6/2024) QUIZ START
+// DAY 6 (8/6/2024) QUIZ START (DO THESE / DO THIS)
 //! For Loops Problems TWO
+
+//!Multiples Checker (1)
+//? Create a program that checks if the elements in an array of numbers are multiples of a specific number and displays a message accordingly.
+//TODO Define an array containing a list of numbers.
+//TODO Define a variable for the specific number to check multiples of.
+//Output Results: Use console.log to display the results.
+ 
+ 
+//!Age Group Categorizer (2)
+//? Create a program that categorizes the ages in an array as 'child', 'teen', 'adult', or 'senior' based on their values.
+//TODO Define an array containing a list of ages.
+//Output Results: Use console.log to display the age categories.
+ 
+ 
+//! Palindrome Checker (3)
+//?Create a program that checks if the elements in an array of strings are palindromes and displays a message accordingly.
+//TODO Define an array containing a list of strings.
+//Output Results: Use console.log to display the results.
+ 
+
+//!Prime Number Checker (4)
+//?Create a program that checks if the elements in an array of numbers are prime and displays a message accordingly.
+//TODO Define an array containing a list of numbers.
+//Output Results: Use console.log to display the results.
+ 
+
+//!Uppercase Checker (5)
+//?Create a program that checks if the elements in an array of strings are in uppercase and displays a message accordingly.
+//TODO Define an array containing a list of strings.
+//Output Results: Use console.log to display the results.
+
+//DAY 6 (8/6/2024) QUIZ END
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+//DAY 6 (8/6/2024) ZACH'S ACTIVE INSTRUCTION START
+
+//The different kinds of loops
+
+//FOR 
+for (let i= 0 ; i < 5 ; i++){
+    console.log(`for i = ${i}`);
+}
+
+//WHILE 
+let i = 0;
+while (i < 5){
+    console.log(`(while) i = ${i}`);
+    i++;
+}
+
+//DO WHILE 
+
+let j = 0;
+do {
+    console.log(`(do while) l = ${j}`);
+    j++;
+} while (j < 5);
+
+let input; 
+do {
+    input = prompt("enter password: ");
+} while (input != "123");
+console.log("access granted");
+
+//FOR EACH LOOPS 
+
+//init
+const Numberz = [1, 2 , 3, 4, 5];
+
+//      //step 
+Numberz.forEach((element) => {
+    console.log(element);
+});
+
+
+//for version 
+for (let i = 0; i < Numberz.length; i++){
+    console.log(`(for version : ${Numberz[i]})`);
+}
+
+//NESTED FORS
+
+//debugger;
+// Outer loop, prints 12 months of year
+for (let month = 1; month <= 12; month++){
+    console.log(`month: ${month}`);
+
+    //inner loop, prints 30 days of month
+    for (let day = 1; day <= 30; day++){
+        console.log(`\tday: ${day}`)
+    }    
+}
+//DAY 6 (8/6/2024) ACTIVE INSTRUCTION END 
+
+//DAY 7 (8/7/2024) ACTIVE INSTRUCTION/ QUIZ REVIEW START
+
+//Nicole's #region Multiples Checker
+
+let num_arr = [2 , 78, 5, 63, 3, 2, 8, 12, 34]
+
+let multiple = 2;
+let isMultiple = true;
+
+for (i= 0 ; i <num_arr.length; i++){
+    /* if the # in the arr is divisible by the multiple var without a remainder left over it's a multiple*/
+    if(num_arr[i] % multiple ===0) {
+        console.log(num_arr[i] + " is a multple of" + multiple);
+    } else {
+        console.log(num_arr[i] + " is not a multiple of " + multiple);
+    }
+}
+//#endregion 
+
+//Bianca's Age Categorizer 
+//Question Two 
+//Age Group Categorizer 
+//Create a program that sections different ages into classes 
+
+//TODO Define an array containing a list of ages 
+//Output the results and use console.log to display them
+
+let ages = [10 , 30, 28, 40, 16, 66, 79];
+
+for (let i =0 ; i < ages.length; i++) {
+
+    if (ages[i] <= 13) {
+        console.log("You are a child");
+    }
+    else if (ages[i] <= 18) {
+        console.log("You are a teen.");
+    }
+    else if (ages[i] >= 18 && ages[i] <= 59){
+        console.log("You are an adult.")
+    }
+    else if (ages[i] >= 60){
+        console.log( "You are a senior")
+    }
+};
+
+//! Bryan's Palindome Checker 
+//? Create a program that checks if the elemetns in an array of strings are palindromes and displays a message accordingly 
+//TODO Define an array contianing a lisit of strings. 
+
+//Output Results : use console.log to dispaly the resutls. 
+
+const possiblePalindromes = ["kayak" , "pool" , "rotator" , "nun" , "spit"];
+    for ( let i = 0 ; i < possiblePalindromes.length; i++) {
+        let str = possiblePalindromes[i];
+        let reversed ="";
+
+        for (let j = srt.length -1; j >= 0; j--){
+            reversed +- str[j];
+        } //end for loop 
+
+        if(str === reversed) {
+            console.log(`${str} is a palindrome!`)
+        } else {
+            console.log(`${str} is NOT a palindrome!`)
+        }// end if else 
+    }// end for loop 
+
+// DAY 7 (8/7/2024) ACTIVE INSTRUCITON/ QUIZ REIVEW END
+// DAY 8 (8/8/2024) ASSIGNMENT/ PROJECT START
+
 /*
-!Multiples Checker
-? Create a program that checks if the elements in an array of numbers are multiples of a specific number and displays a message accordingly.
-TODO Define an array containing a list of numbers.
-TODO Define a variable for the specific number to check multiples of.
-Output Results: Use console.log to display the results.
- 
- 
-!Age Group Categorizer
-? Create a program that categorizes the ages in an array as 'child', 'teen', 'adult', or 'senior' based on their values.
-TODO Define an array containing a list of ages.
-Output Results: Use console.log to display the age categories.
- 
- 
-! Palindrome Checker
-?Create a program that checks if the elements in an array of strings are palindromes and displays a message accordingly.
-TODO Define an array containing a list of strings.
-Output Results: Use console.log to display the results.
- 
-!Prime Number Checker
-?Create a program that checks if the elements in an array of numbers are prime and displays a message accordingly.
-TODO Define an array containing a list of numbers.
-Output Results: Use console.log to display the results.
- 
-!Uppercase Checker
-?Create a program that checks if the elements in an array of strings are in uppercase and displays a message accordingly.
-TODO Define an array containing a list of strings.
-Output Results: Use console.log to display the results.
- 
+Coin Sorter and Wrapper Calculator
+Project: Coin Sorter and Wrapper Calculator
+Objective:
+Create a JavaScript program that calculates the total value of coins in US currency (pennies, nickels, dimes, and quarters) and sorts them into coin wrappers. The program will then output the number of coin wrappers needed and the total amount in dollars.
+
+Instructions:
+1 . Define Variables for Coins:
+    Create variables to store the number of each type of coin: pennies, nickels, dimes, and quarters.
+
+2. Calculate Total Value of Coins:
+    Write code to calculate the total value of each type of coin in dollars.
+    Calculate the combined total value of all coins.
+3. Sort Coins into Wrappers:
+    Use the standard capacity for each type of coin wrapper:
+        Pennies: 50 coins per wrapper
+        Nickels: 40 coins per wrapper
+        Dimes: 50 coins per wrapper
+        Quarters: 40 coins per wrapper
+    Calculate the number of wrappers needed for each type of coin.
+    Calculate the remaining coins that do not fill a wrapper completely.
+4. Output Results:
+    Use console.log to display the number of wrappers needed for each type of coin and remaining coins that do not fill a wrapper
+    Use console.log to display the total amount in dollars.
+
+After finished go to discussion tab and submit link to the Javascript Coin Project.
+
 */
-    // MY QUESTIONS 
+// DAY 8 (8/8/2024) PROJECT/ASSIGNMENT END 
+
+// DAY 9 (8/9/2024) PROJECT/ ASSIGNMENT cont. START
+
+
+
+
+
+// MY QUESTIONS 
 /*
 //So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false?
 
