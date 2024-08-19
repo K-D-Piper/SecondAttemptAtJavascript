@@ -1256,30 +1256,99 @@ for (let i = 0; i < Mcolors.length ; i++){
 //TODO Define a variable for the specific number to check multiples of.
 //Output Results: Use console.log to display the results.
  
-
+let MyMultiples = [8, 16, 7, 9, -3, 152, 1, 5, 555]
  
+for (let M = 0 ; M < MyMultiples.length; M++)
+{
+    if( MyMultiples % 2 === 0)
+    {
+        console.log(`${M} is a multiple of 2`)
+    } else 
+    {
+        console.log (`${M} is not a multiple of 2"`)
+    }
+}
+
 //!Age Group Categorizer (2)
 //? Create a program that categorizes the ages in an array as 'child', 'teen', 'adult', or 'senior' based on their values.
 //TODO Define an array containing a list of ages.
 //Output Results: Use console.log to display the age categories.
  
+let MyAges = [3, 6, 9, 12, 15, 18, 21, 24, 80] 
+
+for (let A = 0; A < MyAges.length ; A++)
+{
+    if (MyAges < 13) 
+    {
+        console.log("Child"[A])
+    } else if (MyAges >= 13 && MyAges < 20) 
+    {
+        console.log("Teen"[A])
+    } else if (MyAges >= 20 && MyAges < 60) 
+    {
+        console.log("Adult"[A])
+    } else (MyAges > 60)
+    {
+        console.log("Senior"[A])
+    }
+}
+
  
 //! Palindrome Checker (3)
 //?Create a program that checks if the elements in an array of strings are palindromes and displays a message accordingly.
 //TODO Define an array containing a list of strings.
 //Output Results: Use console.log to display the results.
- 
+
+let MyPalidromes = ["poop" , "bop" , "pickles" , "bob", ")(()"]
+
+for (let P = 0; P < MyPalidromes.length; P++)
+{
+    if (MyPalidromes.reverse === true)
+    {
+        console.log ("Thats a palidrome")
+    } else 
+    {
+        console.log("Not a palidrome")
+    }
+
+}
 
 //!Prime Number Checker (4)
 //?Create a program that checks if the elements in an array of numbers are prime and displays a message accordingly.
 //TODO Define an array containing a list of numbers.
 //Output Results: Use console.log to display the results.
  
+let PrimeNumbers = [1, 5, 17, 2, 8]
+
+for (pr = 0; pr < PrimeNumbers.length; pr++)
+{
+    if (PrimeNumbers.reduce === 2)
+    {
+        console.log("Not a prime number")
+    } else 
+    {
+        console.log("prime number")
+    }
+}
 
 //!Uppercase Checker (5)
 //?Create a program that checks if the elements in an array of strings are in uppercase and displays a message accordingly.
 //TODO Define an array containing a list of strings.
 //Output Results: Use console.log to display the results.
+
+let UpperCaseList = ["AHH" , "pickles" , "CAKE", "Pink" , "leggo"]
+
+for (let U = 0; U < UpperCaseList.length; U++)
+{
+    if (UpperCaseList === UpperCaseList.toUpperCase) 
+    {
+        console.log("Thats all caps")
+    } else 
+    {
+        console.log ("Not all caps")
+    }
+}
+
 
 //DAY 6 (8/6/2024) QUIZ END
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1589,9 +1658,6 @@ Inside Cirle One is Cirle Two.
 
 So in that case lets look at this. 
 
-let line1 = " Hi. I'm Line 1. Spin."
-let line2 = "Hello. I'm Line 2. Spin <3"
-
 for (let spin1 = 0 ; spin1 < 1 ; spin1++)
 {
     console.log("Spin 1") 
@@ -1737,7 +1803,7 @@ console.log(challengeData.length)
 
     let pennyValue = .01;
     let dimeValue = .10;
-    let nickelValiue = .05;
+    let nickelValue = .05;
     let quarterValue = .25;
 
     for (let i =0; i < challengeData.length; i++){
