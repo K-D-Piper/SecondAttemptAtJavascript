@@ -1839,7 +1839,51 @@ console.log('$' + quarterConversion.toFixed(2));
 console.log(pennyConversion + dimeConversion + nickelConversion + quarterConversion )
 
 //DAY 9 (8/9/2024) ACTIVE INSTRUCITON/ PROJECT REVIEW END 
+
+/*
+Moviung onto Functions! 
+A fucntion is a section of code to be set up now but used later, or when called. 
+
+functions do not run with your other code, they just have code set up that sits dorment, or in wait, until its called. 
+
+Functions are written like this...
+
+function funcName(args){
+    Do stuff
+};
+
+Functions are decared, given names, the paraments are called arugments or args, then inside the code is what it will do. 
+
+*/
+
 //DAY 9 (8/9/2024) ACTIVE INSTRUCTION/ FUNCTIONS START
+
+//functions can be called before initization
+//funcOne();
+
+// function schema 
+//making functions saves blocks of code to be ran when we need it.
+//INSTEAD of immedietly running as the page loads 
+function funcOne(){
+    console.log("Hello World")
+    console.log(5 +7) ;
+};
+//This is how we call funciton code blocks to run 
+//ex. funcName();
+funcOne();
+
+let numOne = 7
+let NumTwo = 3
+
+//Scope: wheater it's GLOBAL, BLOCK, FUNCTION SCOPE(Local scope)
+function addTwoNums() {
+    console.log(numOne + numTwo);
+}
+
+//notes for video ended at 48:00
+
+
+
 
 
 
@@ -1855,4 +1899,7 @@ console.log(pennyConversion + dimeConversion + nickelConversion + quarterConvers
 
 //What are "template literals"
 
+//Expain scope again 
+
+//what are the () with fucntions for. function functionName (this part. expain this.)
 */
