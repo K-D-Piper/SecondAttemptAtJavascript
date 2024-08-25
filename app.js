@@ -1854,6 +1854,9 @@ function funcName(args){
 
 Functions are decared, given names, the paraments are called arugments or args, then inside the code is what it will do. 
 
+MY UNDERSTANDING (as i am further developing it. )
+
+
 */
 
 //DAY 9 (8/9/2024) ACTIVE INSTRUCTION/ FUNCTIONS START
@@ -1880,14 +1883,59 @@ function addTwoNums() {
     console.log(numOne + numTwo);
 }
 
-//notes for video ended at 48:00
+addTwoNums();
+
+//This function is currently accepting two arguments (args)
+function addTwoNumsV2(a, b) {
+    console.log( a - b);
+}
+
+//We are sending data inside the arguments spots in functions;
+addTwoNumsV2(numOne, numTwo);
+addTwoNumsVs(6 , 10);
+addTwoNumsV2("Hello" , "Zach!");
 
 
+function greeting(){
+    console.log("HI");
+}
+greeting();
 
+function greetingByName(name) {
+    console.log("Hello" + name + "! Welcome to the site.");
+}
+greetingByName("Dayna");
 
+function greetingByExcitment(name) {
+    let upperCaseName = name.toUpperCase();
+    console.log(upperCaseName)
 
+    //THIS IS sending back the output of this function
+    return upperCaseName
+}
+
+//IF you ever need a function to send back new data, You'll need a return
+let screamingName = greetingByExcitment("zach");
+
+// upperCaseName
+//console.log(upperCaseName); //! ERRORED OUT bc Local scoped to "greetingByExcitment() function"
+console.log(`HELLOOOOOOO ${screamingName} IT'S NORTEHRN LIGHT SUPEX SINGER!!`);
+
+//THIS functions shows DEFAULT values being added in the Arguments
+function sandwichMaker(typeOfBread, typeOfMeat = "N/A", typeOfSauce, typeOfVeggie = "N/A") 
+{
+    console.log(
+        `Bread: ${typeOfBread} Meat : ${typeOfMeat} Sauce: ${typeOfSauce} Veggies : ${typeOfVeggie}`
+    )
+}
+
+let zachsandwich = sandwichMaker("white" , "ham" , "mayo" , "lettuce");
+let margaritoSandwich = sandwichMaker("white" , "rostierry chicken" , "buffalo" )
 
 // DAY 9 (8/9/2024) ACTIVE INSTRUCTION END
+
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // MY QUESTIONS 
 /*
@@ -1897,7 +1945,7 @@ function addTwoNums() {
 
 //how do i know what words are mine/unique to use and what words are already preset in JavaScript?
 
-//What are "template literals"
+//What are "template literals" ----> ${this is template literals} //will get further explication later. but it basially just works similar to quotes but inside of quotes so you can call to something/a variable prevously named/declared 
 
 //Expain scope again 
 
