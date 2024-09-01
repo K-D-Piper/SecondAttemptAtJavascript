@@ -106,7 +106,7 @@ let num3 = 0
 console.log(num3)
 num3++;
 console.log(num3)
-num3--
+num3-- // MIKEL WROTE THIS num3 - 1
 console.log(num3)
 
 // setting multi-variables
@@ -231,7 +231,7 @@ console.log("Last Item: " + lastItem)
 //TODO Define an array of favorite movies
 //Output each movie individually
 
-fav_movies = ["Barbie Movie", "Coraline", "Princess & the Frog"]
+let fav_movies = ["Barbie Movie", "Coraline", "Princess & the Frog"]
 console.log(fav_movies[0])
 console.log(fav_movies[1])
 console.log(fav_movies[2])
@@ -745,7 +745,7 @@ In JavaScript there are many different kinds of statements and "for loop" is jus
 * Writers Note. The next  lines are my understanding (so it can be wrong) but is as followed 
     Initalizaton: Starting point.
     Conditon : Condition to be met
-    Iteration: How many times the code will repeat. 
+    Iteration: How many around
 
     So one can also read it as 
         for (what we have ; what were checking; how many times were checking it) {
@@ -1934,6 +1934,39 @@ let margaritoSandwich = sandwichMaker("white" , "rostierry chicken" , "buffalo" 
 
 // DAY 9 (8/9/2024) ACTIVE INSTRUCTION END
 
+/*
+okay so a funciton is broken down into several main componets 
+
+the function, the paramenters, and the arugments within the pramaters. then what is within the curly braces
+
+okay so , it rea
+
+
+*/
+// DAY 10 (8/12/2024) ACTIVE INSTRUCTION BEGIN. QUIZ PROBLEMS REVIEW
+//! Grade Calculator 
+//? Create a program that calculates the average greade from an array of grades and determines the corresponding letter grade. 
+
+//TODO Define an Array: define an array ccontianing a list of 5 grades. 
+let fgrades = [85,34,56,87,90]; 
+let fgradesTwo = [82,56,31,78,67];
+
+//TODO Create a Function: Create a funtion to calculate the average of the grades. 
+//? calcutlates the average grade from an array of grades 
+function calcAaverage(fgradesArr){
+    let average = 0;
+    for (let i = 0; i < fgradesArr.length; i++){
+        average =- gradesArr[i]
+
+    }
+    average = average/gradesArr.lengh;
+    console.log(average)
+
+}
+
+calcAaverage(grades);
+
+
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1948,6 +1981,7 @@ let margaritoSandwich = sandwichMaker("white" , "rostierry chicken" , "buffalo" 
 //What are "template literals" ----> ${this is template literals} //will get further explication later. but it basially just works similar to quotes but inside of quotes so you can call to something/a variable prevously named/declared 
 
 //Expain scope again 
+// above answered. needs transcibed elaboration
 
 //what are the () with fucntions for. function functionName (this part. expain this.)
 */
