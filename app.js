@@ -760,14 +760,14 @@ let Line = "Welcome to the world of loops! Don't understand? Read line again."
 
 //BTW i is the most commonly used loop phase because its short for "initization" which is the thing your starting point. Initilization just means assinging value to a variable/something 
 for (let i = 0; i < 1 ; i++) {
-    console.log(Line + " 1")
+    console.log(`${i}Line + " 1"`)
 }
 //Read above as followed. //For ( initizlation to equal 0 ; initilztion is less than 1 ; initization should be checked/ran once then again.) 
 
 // OR 
 //debugger
 for ( let understanding = 0; understanding < 1 ; understanding++) {
-    console.log(Line + " 2")
+    console.log(`${understanding}Line + "2"`)
 }
 //read above as followed. //for the case of ( let understanding be equal to 0 ; and understanding is less than one; understanding should be ran once then again.)
 // DAY 4 (8/2/2024) ACTIVE INSTRUCTION LOOPS 
@@ -1876,7 +1876,7 @@ function funcOne(){
 funcOne();
 
 let numOne = 7
-let NumTwo = 3
+let numTwo = 3
 
 //Scope: wheater it's GLOBAL, BLOCK, FUNCTION SCOPE(Local scope)
 function addTwoNums() {
@@ -1892,14 +1892,14 @@ function addTwoNumsV2(a, b) {
 
 //We are sending data inside the arguments spots in functions;
 addTwoNumsV2(numOne, numTwo);
-addTwoNumsVs(6 , 10);
+addTwoNumsV2(6 , 10);
 addTwoNumsV2("Hello" , "Zach!");
 
 
-function greeting(){
+function fgreeting(){
     console.log("HI");
 }
-greeting();
+fgreeting();
 
 function greetingByName(name) {
     console.log("Hello" + name + "! Welcome to the site.");
@@ -1954,34 +1954,104 @@ let fgradesTwo = [82,56,31,78,67];
 //TODO Create a Function: Create a funtion to calculate the average of the grades. 
 //? calcutlates the average grade from an array of grades 
 function calcAaverage(fgradesArr){
-    let average = 0;
+    let faverage = 0;
     for (let i = 0; i < fgradesArr.length; i++){
-        average =- gradesArr[i]
+        faverage += fgradesArr[i]
+
+        average = faverage / fgradesArr.lengh;
+        return faverage
 
     }
-    average = average/gradesArr.lengh;
-    console.log(average)
+    console.log(faverage)
 
 }
 
-calcAaverage(grades);
+calcAaverage(calcAaverage);
 
 
+//TODO Create Another Function: Create another functiohn oto determine the letter grade based on the average. 
+
+function fletterGrade(fgradeNum) { 
+    if (fgradeNum > 100){
+        console.log(`${fgradeNum} can't exist and recieve no letter!`)
+    } else if (fgradeNum >= 90){
+        console.log(`${fgradeNum} has an A average!`)
+    }else if (fgradeNum >= 80){
+        console.log(`${fgradeNum} has an B average!`)
+    }else if (fgradeNum >=70){
+        console.log(`${fgradeNum} has an C average!`)
+    }else if (fgradeNum >= 60){
+        console.log(`${fgradeNum} has an D average!`)
+    }else{
+        console.log(`${fgradeNum} has an F average!`)
+    }
+}
+fletterGrade(calcAaverage)
+fletterGrade(87);
+
+//! Simple To-Do List 
+//? Create a program that allows the user to add and display tasks in a to-do list 
+
+//TODO Define an Array: Define an array to store the tasks. 
+let taskToDo = [];
+//TODO Create Functions: Create functions to add a task and display the to-do list. 
+
+function addATask(additionalTask){
+    //how do i add an item to the array?
+    taskToDo.push(additionalTask);
+    console.log(taskToDo);
+}
+
+function displayToDoList(){
+    console.log(taskToDo);
+}
+
+function removeAnItem(taskCompleted){
+    //I need to remve a specifc item. 
+    //If else statements?
+    //if(taskCompleted =="Make bed"){
+    //    console.log("its here!")
+    // }
+    //debugger
+    let uppercaseTaskCompleted = taskCompleted.toUpperCase();
+    console.log(uppercaseTaskCompleted)
+
+    for(let i =0; i <taskToDo.length; i++){
+        let currentTAskItem = taskToDo[i].toUpperCase();
+        if(uppercaseTaskCompleted == currentTAskItem){
+            taskToDo.splice(i, 1);
+            console.log(taskToDo);    
+        }    
+    }
+}
+
+addATask("Make bed")
+addATask("Code some")
+addATask("Make food!")
+removeAnItem("make food!")
+// DAY 10 (8/12/2024) ACTIVE INSTRUCTION END
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // MY QUESTIONS 
-/*
-//So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false?
-
-// whats the difference between `` and "" and '' ?
-
-//how do i know what words are mine/unique to use and what words are already preset in JavaScript?
-
-//What are "template literals" ----> ${this is template literals} //will get further explication later. but it basially just works similar to quotes but inside of quotes so you can call to something/a variable prevously named/declared 
-
-//Expain scope again 
-// above answered. needs transcibed elaboration
 
 //what are the () with fucntions for. function functionName (this part. expain this.)
+
+
+
+
+
+
+
+
+
+/*'
+// MY ANSWERS
+//So, if the ! means not and puting in front of a true makes it false, why is that sometimes a better case than just writing false? (its just faster. More instant, you can see what you mean or what you're tryinig to compare vs writing in false.)
+// whats the difference between `` and "" and '' ? (template literals are more for writing out what you want it to say while quotes are like what its saying.)
+//how do i know what words are mine/unique to use and what words are already preset in JavaScript? (pratice. using the langauge.)
+//What are "template literals" ----> ${this is template literals} //will get further explication later. but it basially just works similar to quotes but inside of quotes so you can call to something/a variable prevously named/declared (see 2, there like a different kinda quotation mark)
+//Expain scope again (scope. Where in the computer page will your code be seen. GLOBAL is everwhere, at any point on your page you can reference it. No matter how far down you go, its everywhere. LOCAL (or funcgtion scope) is held in one single area. It can not be refrenced futher down on the page, only the code that references it can reference it. )
+
+
 */
