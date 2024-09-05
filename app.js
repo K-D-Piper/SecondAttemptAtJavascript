@@ -2030,6 +2030,260 @@ addATask("Code some")
 addATask("Make food!")
 removeAnItem("make food!")
 // DAY 10 (8/12/2024) ACTIVE INSTRUCTION END
+// DAY 11 (8/13/2024) ACTIVE INSTRUCTION START (REIVEW)
+/*
+//! Simple To-Do List 
+//? Create a program that allows the user to add and display tasks in a to-do list 
+
+//TODO Define an Array: Define an array to store the tasks. 
+let taskToDo = [];
+//TODO Create Functions: Create functions to add a task and display the to-do list. 
+
+function addATask(additionalTask){
+    //how do i add an item to the array?
+    taskToDo.push(additionalTask);
+    console.log(taskToDo);
+}
+
+function displayToDoList(){
+    console.log(taskToDo);
+}
+
+function removeAnItem(taskCompleted){
+    //I need to remve a specifc item. 
+    //If else statements?
+    //if(taskCompleted =="Make bed"){
+    //    console.log("its here!")
+    // }
+    //debugger
+    let uppercaseTaskCompleted = taskCompleted.toUpperCase();
+    console.log(uppercaseTaskCompleted)
+    //taskToDo = ARRAY OF DATA []
+    for(let i =0; i <taskToDo.length; i++){
+        let currentTAskItem = taskToDo[i].toUpperCase();
+        if(uppercaseTaskCompleted == currentTAskItem){
+            taskToDo.splice(i, 1);
+            console.log(taskToDo);    
+        }    
+    }
+}
+
+addATask("Make bed")
+addATask("Code some")
+addATask("Make food!")
+removeAnItem("make food!")
+
+Q/A AND NOTES 
+    //How do we know its a function?
+        //first, a function will be created. Second we will call it in a seperate location
+
+    //GLOBAL, LOCAL/FUNCTION 
+        let globalScope = "this is global scoped"
+        console.log(globalScope)
+        function localScope() 
+        {
+            let localScope = "this is function scope"
+            console.log(localScope)
+        }
+*/
+// DAY 11 (8/13/2024) cont. PROBLEMS REIVEW START
+
+//! Temperature Converter 
+//? Create a program that converts tempatures between Celsius, Fahrenheit, and Kelvin. 
+
+//TODO Define Variables: Allow the user to input a tempature value and the unit they want to convert from. 
+let ftempNum = 25;
+let tempUnitLetter = "C";
+
+//TODO Create Functions: Create functions to convert between Celsius, Fahrenheit, and Kelvin. 
+
+//?Making this function purley for changing Celsius number to Kelvin Number!
+function celsiusToKelvin(value){
+
+    //I KNOW I'M to have to store this kelvin number somewhere.
+    //*Planning to return to a store variable.
+    return value + 273.15;
+}
+
+function celsiusToFahrenheit(value){
+    return (value * 9/5) + 32
+}
+
+function KelvinToCelsius(value){
+    return (value * 9/5) + 32
+}
+
+function fahrenheitToCelsius(value){
+    return (value - 32) * 5/9
+}
+//let storedKelvinNum = celsiustoKelvin(ftempNum) //! WORKS
+//console.log(storedKelvinNum) //! 298.15
+//let storedFahrenheitNum = celsiustoFahrenheit(ftempNum); //!!WORKS
+//console.log(storedFahrenheitNum); //! 77 degrees
+
+//? I have the conversions when dealing with celsius numbers 
+//TODO I NEED a way to tell apart and give me the other degrees
+
+function tempConverter(currentTempValue, currentTempLetter){
+    console.log(currentTempValue + " is the tempNum");
+    console.log(currentTempLetter + " is the tempUnitLetter");
+    let upperCaseLetter = currentTempLetter.toUpperCase();
+    console.log(upperCaseLetter)
+    let celsius = 0;
+    let fahrenheit = 0;
+    let kelvin = 0;
+
+    if(upperCaseLetter === "C"){
+        fahrenheit = celsiusToFahrenheit(currentTempValue);
+        kelvin = celsiusToKelvin(currentTempValue)
+        celsius = currentTempValue
+        console.log(`Fahrenheit: ${fahrenheit} Kelvin:${kelvin} Celsius: ${celsius}`);
+    } else if (upperCaseLetter === "F"){
+        fahrenheit = currentTempValue;
+        celsius = fahrenheitToCelsius(currentTempValue)
+        kelvin = celsiusToKelvin(celsius);
+        console.log(`Fahrenheit: ${fahrenheit} Kelvin:${kelvin} Celsius: ${celsius}`);
+    } else if (upperCaseLetter === "K"){
+        celsius = KelvinToCelsius(currentTempValue)
+        fahrenheit = celsiusToFahrenheit;
+        kelvin = currentTempValue;
+        console.log(`Fahrenheit: ${fahrenheit} Kelvin:${kelvin} Celsius: ${celsius}`);
+    }
+}
+
+tempConverter(ftempNum, tempUnitLetter)
+
+//? (Hint: There will be two arguments temerature value and unit letter (Celsiius, Farenhit, Kelvin))
+//? ex. if i provide 25 and "C" I want the Kelvin and Farenheit tempature 
+
+//* KelvintoCelsius conversion:
+//* kelvinNum - 273.15
+
+//* celsiustoKelvin:
+//* celsiusNum + 273.15
+
+//* fahrenheitToCelsius:
+//*(fahrenheit - 32) * 5/9
+
+//* celsiusToFahrenheit:
+//* (celsius * 9/5) + 32
+
+//TODO Use if-else Statements: use if-else statments to determine which conversion to preform based on teh user's' input. 
+//* Output Results: Use console.log to display the convered temperature. 
+
+//Bianca's Song List 
+
+let songTitles = [];
+//Empty array to add songs to 
+
+//creating a function to add songs to array using .push method
+function addASong(additionalSongs){
+    songTitles.push(additionalSongs);
+    console.log(songTitles);
+} //line 222
+
+//console.log (line 222) additional songs array should now look roughly like : abstract, always on my mind, black magic woman, babylon
+addASong(`Abstract (Psychopomp)`);
+addASong(` Always On My Mind`);
+addASong(` Black Magic Woman`);
+addASong(` Babylon (Don't Let Me Fall)`)
+
+//creating a funciton to remove a song from the array or "playlist"
+function removeASong(deleteSong){
+    songTitles.splice(2,1);
+    console.log(songTitles)
+} //line 234
+
+removeASong();
+//calling function so console.log (line 234) can show up on the console 
+
+//displaying plalylist on console
+console.log(`Playlist Displayed As: 
+    ${songTitles}`);
+//End of problem five / Bianca's song list
+
+//Nicole's Bank Account Manager
+//#region
+//VARIABLES 
+let balance = 1000;
+depositMoney(790.98); //Deposit money into acct
+withdrawMoney(123.8); //Withdraw money from acct
+checkBalance(); //Balance in acct
+
+//DEPOSIT MONEY INTO THE ACCT 
+function depositMoney(amount){
+    if (amount > 0) {
+        balance += amount;
+        console.log(`Deposited $${amount}. New balance $${balance}`);
+    } else {
+        console.log(`Deposit amount must be greater.`);
+    }//END OF IF-ELSE STATEMENT 
+}//END OF depositMoney FUNCTION 
+
+//WITHDRAW MONEY FROM ACCT
+function withdrawMoney(amount) {
+    if (amount > 0) {
+        if (amount <= balance){
+            balance -= amount;
+            console.log(`Withdrew $${amount}. New balance: $${balance}`);
+        } else {
+            console.log("Insufficent funds.");
+        } 
+    } else {
+        console.log("Withdrawl amount must be greater than zero.");
+    }
+} //END OF withdrawMoney FUNCTION 
+
+//CHECK BALANCE OF ACCT
+function checkBalance(){
+    console.log(`Current Balance: $${balance}`);
+}
+
+//#endregion //End of Nichole's Bank Account Manger 
+
+// Christopher's Bank Account Manager START
+//! Bank Account Manger
+//? Create a program that allows a user to manage a simple bank account, including depositing, withdrawing, and checking the balance. 
+
+//TODO Define Variables: Start with a balance variable. 
+
+let bankBalance = 1733;
+
+//TODO Cretae Functions: Create funcitons to deposit money, withdraw monely, and check the balnce. 
+function bankDeposit(depositAmount){
+    if(depositAmount > 0){
+        bankBalance += depositAmount
+        return depositAmount;
+    }
+}
+let totalDeposit = bankDeposit(1017);
+console.log(`You made a deposit of $${totalDeposit}`);
+
+//TODO Use if-else Statments: Use if-else statments to ensure the withdrawl amount does not exceed the balanace.
+//*Output Results: Use coonsole.log to display the updated balance after each operation. 
+
+function bankWithdraw(moneyWithdraw){
+    if (moneyWithdraw > 0 && moneyWithdraw <= bankBalance){
+        bankBalance -= moneyWithdraw;
+        console.log(`Your wihtdraw was successful! You're new balance is $${bankBalance}`);
+    } else if (moneyWithdraw > bankBalance){
+        console.log(`You have insufficent funds in your account.`)
+    } else {
+        console.log("You have invalid wihtdraw amount...")
+    }
+}
+let totalWithdrawl = bankWithdraw(1562)
+
+function bankChecker(checkBalance){
+    console.log(`You have a balance of $${bankBalance}`)
+    return checkBalance;
+}
+let balanceChecker = bankChecker(bankBalance);
+
+//Christopher's Bank Account Manger END 
+// DAY 11 (8/13/2024) ACTIVE INSTRUCTION & QUIZ PROBLEM REIVEWS END 
+
+
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
