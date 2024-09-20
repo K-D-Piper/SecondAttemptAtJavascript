@@ -2461,7 +2461,149 @@ let books = [
 //TODO Filter Available Books: Write a function to list all available books.
 //TODO Filter Borrowed Books: Write a function to list all borrowed books.
 
-//QUIZ PROBLEMS DAY 12 (8/14/2024) END
+//QUIZ PROBLEMS DAY 12 (8/14/2024) END (PLEASE DO)
+
+//DAY 13 (8/15/2024) Zach's Active Instruction  START
+
+// classes
+//Define a class named `Car` that represents a vehicle. 
+
+class Car {
+        //The constructor method is called when a new instance of the class is created. 
+        //It initializes the propoerties `make`, `modle`, and `speed` for teh Car object. 
+      constructor(){ 
+        this.make = "";
+        this.model = "";
+        this.speed = 0;
+    }
+
+        //Define a method named `accelerate` that increases teh car's speed.
+        //The `mph` parameter specfies how much to increase the speed by.
+       accelarate(mph){ 
+        this.speed += mph; //Add the specifed mph to teh current speed
+        console.log(`This car is going ${this.speed}`);  //Log the updated speed       
+    }
+//Define a meethod named `break` that decreases the car's speed. 
+//The `mph` parameter specifes how much to decrease the speed by. 
+    brake(mph){
+        this.speed -= mph;
+        console.log(`This car is going ${this.speed} mph`);
+    }
+}
+
+// Create an instance of the `Car` class with the make "Nissan" and model "Pathfiinder".
+const shitbox = new Car("Nissan" , "Pathfinder");
+
+
+console.log(`This car is going ${shitbox.speed} mph`); //Log the intial speed (which is 0)
+shitbox.accelarate(20); //Call the `accelerate` method to increase speed by 20 mph
+shitbox.brake(50); //Call the  `brake` method to decrease speed by 50 mph
+
+// Define a class named `Employee` that represents and employee. 
+
+class Employee {
+    //The construtor method initializes the propeties ` name`, `title`, and `catchPhrase`.
+    constructor(name, title, catchPhrase){
+        this.name = name; // the name of the employee
+        this.title = title; // The job title of the employee
+        this.catchPhrase = catchPhrase; //A catchphrase associated with the employee
+    }
+}
+
+    // Create instances of the `Emplolyee` class for two characters. 
+    const sponebob = new Employee ("Spongebob" , "Frycook", "I'm ready");
+    const squidward = new Employee("Squidward", "Cashier", "I hate everyone");
+
+    sponebob.introduce(); //Call the `introduce` method to introduce Spongebob
+    squidward.introduce(); //Call the `introduce` method to introduce Quidward
+
+    //Define a class named `Animal` that represents a generic animal. 
+    class Animal {
+        //Define a method named `speak` that logs a generic animal.
+        speak(){
+            console.log("Some animal noise");
+        }
+
+        //Define a method named `nap` that logs a sleeping sound. 
+        nap(){
+            console.log("zzz");
+        }
+    }
+
+    //Define a class named `Dog` that extends (inherits from) the `Animal` class.
+    class Dog extends Animal {
+        // Override the `speak` method to log a barking sound instead of the genic animal noise.
+        speak(){
+            console.log("Barking");
+        }
+    }
+
+    //Define a class anmed `Cat` that extends (inhearts from) the `Animal` class. 
+    class Cat extends Animal {
+        //Override the `speak` method to log a mewowing sound instead of the generic animal noise. 
+        speak() {
+            console.log("Meow")
+        }
+    }
+
+    //Function declaration for `speak`.
+    function speak(){
+        console.log("speaks 1"); //This funtion will be overridden by the next one
+    }
+
+    function speak() {
+        console.log("speak override"); ///This function overrides the previous one
+    }
+
+    // When calling `speak()`, it will use the last defined funtion.
+    speak(); //Logs "speak override"
+
+//DAY 13 (8/15/2024) Zach's Active Instruction END
+//DAY 13 (8/15/2024) Quiz Problems Review START
+
+//Nicole's Student Grade Management
+
+//#region Personal Contact Book
+
+//#region Student Grade Management 
+
+//OBJECT -- arr
+let nStudents = [
+    {name: "Alice", grade:85},
+    {name: "Bob", grade: 76},
+    {name: "Charlie", grade:92},
+    {name: "David", grade:63},
+    {name: "Eve", grade: 78},
+];
+
+//FUNCTION -- CALCULATE GRADE AVG
+function nGradeAverage(){
+    let total = 0; //sets total value to 0
+    //loops through studetns arr lenght
+    for (let i = 0; i < nStudents.length; i++){
+        total += students[i].grade; //adds all grades as it loops and stores in 'total'
+    }//END FOR LOOP 
+    let average = total / students.length; //stores total / lenght of arr in average
+    return average; //returns resutls to nGradeAverage
+}//END nGradeAverage FUNCTION 
+
+//FUNCTION -- IDENTIFY STUDENTS BELOW AVG
+function belowAverageStudents(){
+    let average = nGradeAverage();
+    let belowAvg = []; //int arr that wiill sstore below avg studetns
+    //loops through student arr
+    for (let i = 0; i < students.length; i++){
+        //if student grade is < average
+        if (students[i].grade < average){
+            belowAvg.push(nStudents[i]); //adds strudent to belowAvg arr
+        } //END IF STATEMENT
+    }//END FOR LOOP 
+    return belowAvg;
+}//END belowAverageStudents FUNCTION 
+
+//OUTPUT -- DISPLAY TO CONSOLE GRADE AVRAGE AND LIST OF STUDENTS BELOW AVERAGE 
+let avg = nGradeAverage(); //stores gradeAvg restults into avg
+
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
